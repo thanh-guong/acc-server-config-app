@@ -1,3 +1,14 @@
 {
-    "I18N_TEST": "i18n_test_en"
+    "I18N_TEST": "i18n_test_en",
+    "MESSAGE": {
+        "INFO": {
+            "INFO_TEST": "info_test_en"
+        },
+        "DEBUG": {
+            "DEBUG_TEST": "debug_test_en"
+        },
+        "ERROR": {
+            "ERROR_TEST": "error_test_en"
+        }
+    }
 }

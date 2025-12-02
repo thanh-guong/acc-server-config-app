@@ -1,3 +1,14 @@
 {
-    "I18N_TEST": "i18n_test_it"
+    "I18N_TEST": "i18n_test_it",
+    "MESSAGE": {
+        "INFO": {
+            "INFO_TEST": "info_test_it"
+        },
+        "DEBUG": {
+            "DEBUG_TEST": "debug_test_it"
+        },
+        "ERROR": {
+            "ERROR_TEST": "error_test_it"
+        }
+    }
 }
