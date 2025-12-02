@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { APP_CONSTANTS } from '../../const/app-const';
 import { LOCAL_STORAGE_ITEM_KEYS } from '../../const/local-storage-const';
 import { INFO_LOGGING_MESSAGES } from '../logging/info-logging';
+import { WARN_LOGGING_MESSAGES } from '../logging/warn-logging';
 
 @Injectable({
   providedIn: 'root',
@@ -40,6 +41,7 @@ export class LanguageService {
   setLanguage(lang: string) {
     // Validate the language
     if (!this.availableLanguages.includes(lang)) {
+      console.warn(WARN_LOGGING_MESSAGES.usingDefaultLanguage, this.fallbackLang);
       lang = this.fallbackLang;
     }
 
