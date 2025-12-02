@@ -5,10 +5,11 @@ import { RouterOutlet } from '@angular/router';
 import { APP_CONSTANTS } from '../const/app-const';
 import { LanguageService } from './services/language-service';
 import { I18N_KEYS } from '../const/i18n-const';
+import { ToolbarComponent } from './components/toolbar-component/toolbar-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslatePipe, TranslateDirective],
+  imports: [RouterOutlet, TranslatePipe, TranslateDirective, ToolbarComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
