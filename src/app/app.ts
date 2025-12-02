@@ -1,5 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
+import { APP_CONSTANTS } from '../const/app-const';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +10,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('acc-server-config-app');
+  readonly applicationName = APP_CONSTANTS.name;
+
+  constructor(private title: Title) {
+    this.title.setTitle(this.applicationName);
+  }
 }
