@@ -1,14 +1,45 @@
 {
-    "I18N_TEST": "i18n_test_it",
-    "MESSAGE": {
-        "INFO": {
-            "INFO_TEST": "info_test_it"
-        },
-        "DEBUG": {
-            "DEBUG_TEST": "debug_test_it"
-        },
-        "ERROR": {
-            "ERROR_TEST": "error_test_it"
-        }
+  "I18N_TEST": "i18n_test_it",
+  "MESSAGE": {
+    "INFO": {
+      "INFO_TEST": "info_test_it"
+    },
+    "DEBUG": {
+      "DEBUG_TEST": "debug_test_it"
+    },
+    "ERROR": {
+      "ERROR_TEST": "error_test_it"
     }
+  },
+  "LABEL": {
+    "DRIVER_CATEGORY": {
+      "0": "Bronzo",
+      "1": "Argento",
+      "2": "Oro",
+      "3": "Platino"
+    },
+    "FORMATION_LAP_TYPE": {
+      "0": "Classica",
+      "1": "Corta",
+      "3": "Cutscene"
+    },
+    "QUALIFY_STANDING_TYPE": {
+      "1": "Giro più veloce",
+      "2": "Giro medio"
+    },
+    "SESSION_TYPE": {
+      "P": "Prove",
+      "Q": "Qualifica",
+      "R": "Gara",
+      "H": "Hotstint",
+      "F": "Free Practice",
+      "W": "Warmup"
+    },
+    "TRACK_MEDALS_REQUIREMENT": {
+      "0": "Nessuna",
+      "1": "Bronzo",
+      "2": "Argento",
+      "3": "Oro"
+    }
+  }
 }
