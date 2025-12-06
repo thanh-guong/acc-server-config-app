@@ -1,5 +1,5 @@
 export interface AssistRules {
-  stabilityControlLevelMax: number;
+  stabilityControlLevelMax: number; // TODO validation between 0 and 100?
   disableAutosteer: number;
   disableAutoLights: number;
   disableAutoWiper: number;
