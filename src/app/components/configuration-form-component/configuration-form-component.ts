@@ -5,6 +5,8 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatOptionModule } from '@angular/material/core';
+import { I18N_KEYS } from '../../../const/i18n-const';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-configuration-form-component',
@@ -14,11 +16,14 @@ import { MatOptionModule } from '@angular/material/core';
     MatInputModule,
     MatButtonModule,
     MatOptionModule,
+    TranslateModule
   ],
   templateUrl: './configuration-form-component.html',
   styleUrl: './configuration-form-component.css',
 })
 export class ConfigurationFormComponent {
+  I18N_KEYS = I18N_KEYS;
+
   constructor(private formService: AccConfigurationFormService) { }
 
   get form(): FormGroup {
