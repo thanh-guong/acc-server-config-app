@@ -1,0 +1,49 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <mat-form-field appearance="outline">
+    <mat-label>UDP Port TODO I18N ME</mat-label>
+    <input matInput type="number" formControlName="udpPort">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>TCP Port TODO I18N ME</mat-label>
+    <input matInput type="number" formControlName="tcpPort">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Max Connections TODO I18N ME</mat-label>
+    <input matInput type="number" formControlName="maxConnections">
+  </mat-form-field>
+
+  <!-- TODO BUGGED 
+  <mat-form-field appearance="outline">
+    <mat-label>LAN Discovery TODO I18N ME</mat-label>
+    <mat-select formControlName="lanDiscovery">
+      <mat-option [value]="1">Enabled</mat-option>
+      <mat-option [value]="0">Disabled</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Register to Lobby TODO I18N ME</mat-label>
+    <mat-select formControlName="registerToLobby">
+      <mat-option [value]="1">Enabled</mat-option>
+      <mat-option [value]="0">Disabled</mat-option>
+    </mat-select>
+  </mat-form-field>
+  -->
+
+  <mat-form-field appearance="outline">
+    <mat-label>Public IP TODO I18N ME</mat-label>
+    <input matInput type="text" formControlName="publicIP">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Config Version TODO I18N ME</mat-label>
+    <input matInput type="number" formControlName="configVersion">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+    Save Configuration TODO I18N ME
+  </button>
+</form>
