@@ -40,6 +40,96 @@
       "1": "Bronze",
       "2": "Silver",
       "3": "Gold"
+    },
+    "ACC_CONFIGURATION": {
+      "UDP_PORT": "UDP Port",
+      "TCP_PORT": "TCP Port",
+      "MAX_CONNECTIONS": "Max Connections",
+      "LAN_DISCOVERY": "LAN Discovery",
+      "REGISTER_TO_LOBBY": "Register to Lobby",
+      "PUBLIC_IP": "Public IP",
+      "CONFIG_VERSION": "Config Version"
+    },
+    "ASSIST_RULES": {
+      "STABILITY_CONTROL_LEVEL_MAX": "Max Stability Control Level",
+      "DISABLE_AUTOSTEER": "Disable Autosteer",
+      "DISABLE_AUTO_LIGHTS": "Disable Auto Lights",
+      "DISABLE_AUTO_WIPER": "Disable Auto Wiper",
+      "DISABLE_AUTO_ENGINE_START": "Disable Auto Engine Start",
+      "DISABLE_AUTO_PIT_LIMITER": "Disable Auto Pit Limiter",
+      "DISABLE_AUTO_GEAR": "Disable Auto Gear",
+      "DISABLE_AUTO_CLUTCH": "Disable Auto Clutch",
+      "DISABLE_IDEAL_LINE": "Disable Ideal Line"
+    },
+    "DRIVER_INFO": {
+      "FIRST_NAME": "First Name",
+      "LAST_NAME": "Last Name",
+      "SHORT_NAME": "Short Name",
+      "DRIVER_CATEGORY": "Driver Category",
+      "PLAYER_ID": "Player ID"
+    },
+    "ENTRY": {
+      "RACE_NUMBER": "Race Number",
+      "FORCED_CAR_MODEL": "Forced Car Model",
+      "OVERRIDE_DRIVER_INFO": "Override Driver Info",
+      "IS_SERVER_ADMIN": "Server Admin",
+      "DEFAULT_GRID_POSITION": "Default Grid Position",
+      "BALLAST_KG": "Ballast (Kg)",
+      "RESTRICTOR": "Restrictor",
+      "CUSTOM_CAR": "Custom Car",
+      "OVERRIDE_CAR_MODEL_FOR_CUSTOM_CAR": "Override Custom Car Model"
+    },
+    "ENTRY_LIST": { "FORCE_ENTRY_LIST": "Force Entry List" },
+    "EVENT_CONFIG": {
+      "TRACK": "Track",
+      "PRE_RACE_WAITING_TIME_SECONDS": "Pre-Race Waiting Time (s)",
+      "SESSION_OVER_TIME_SECONDS": "Session Overtime (s)",
+      "AMBIENT_TEMP": "Ambient Temperature",
+      "CLOUD_LEVEL": "Cloud Level",
+      "RAIN": "Rain",
+      "WEATHER_RANDOMNESS": "Weather Randomness",
+      "CONFIG_VERSION": "Config Version",
+      "SESSIONS": "Sessions"
+    },
+    "EVENT_SESSION": {
+      "HOUR_OF_DAY": "Hour of Day",
+      "DAY_OF_WEEKEND": "Day of Weekend",
+      "TIME_MULTIPLIER": "Time Multiplier",
+      "SESSION_TYPE": "Session Type",
+      "SESSION_DURATION_MINUTES": "Session Duration (min)"
+    },
+    "EVENT_RULES": {
+      "QUALIFY_STANDING_TYPE": "Qualify Standing Type",
+      "PIT_WINDOW_LENGTH_SEC": "Pit Window Length (s)",
+      "DRIVER_STINT_TIME_SEC": "Driver Stint Time (s)",
+      "MANDATORY_PITSTOP_COUNT": "Mandatory Pitstop Count",
+      "MAX_TOTAL_DRIVING_TIME": "Max Total Driving Time (s)",
+      "MAX_DRIVERS_COUNT": "Max Drivers Count",
+      "IS_REFUELLING_ALLOWED_IN_RACE": "Refuelling Allowed in Race",
+      "IS_REFUELLING_TIME_FIXED": "Refuelling Time Fixed",
+      "IS_MANDATORY_PITSTOP_REFUELLING_REQUIRED": "Mandatory Refuelling",
+      "IS_MANDATORY_PITSTOP_TYRE_CHANGE_REQUIRED": "Mandatory Tyre Change",
+      "IS_MANDATORY_PITSTOP_SWAP_DRIVER_REQUIRED": "Mandatory Driver Swap",
+      "TYRE_SET_COUNT": "Tyre Set Count"
+    },
+    "ACC_SETTINGS": {
+      "SERVER_NAME": "Server Name",
+      "ADMIN_PASSWORD": "Admin Password",
+      "CAR_GROUP": "Car Group",
+      "TRACK_MEDALS_REQUIREMENT": "Track Medals Requirement",
+      "SAFETY_RATING_REQUIREMENT": "Safety Rating Requirement",
+      "RACECRAFT_RATING_REQUIREMENT": "Racecraft Rating Requirement",
+      "PASSWORD": "Server Password",
+      "SPECTATOR_PASSWORD": "Spectator Password",
+      "MAX_CAR_SLOTS": "Max Car Slots",
+      "DUMP_LEADERBOARDS": "Dump Leaderboards",
+      "IS_RACE_LOCKED": "Race Locked",
+      "RANDOMIZE_TRACK_WHEN_EMPTY": "Randomize Track When Empty",
+      "CENTRAL_ENTRY_LIST_PATH": "Central Entry List Path",
+      "ALLOW_AUTO_DQ": "Allow Auto DQ",
+      "SHORT_FORMATION_LAP": "Short Formation Lap",
+      "DUMP_ENTRY_LIST": "Dump Entry List",
+      "FORMATION_LAP_TYPE": "Formation Lap Type"
     }
   }
 }
