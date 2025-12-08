@@ -130,6 +130,9 @@
       "SHORT_FORMATION_LAP": "Short Formation Lap",
       "DUMP_ENTRY_LIST": "Dump Entry List",
       "FORMATION_LAP_TYPE": "Formation Lap Type"
+    },
+    "BUTTON": {
+      "DOWNLOAD": "Download"
     }
   }
 }

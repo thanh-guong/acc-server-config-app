@@ -142,5 +142,8 @@ export const I18N_KEYS = {
             DUMP_ENTRY_LIST: 'LABEL.ACC_SETTINGS.DUMP_ENTRY_LIST',
             FORMATION_LAP_TYPE: 'LABEL.ACC_SETTINGS.FORMATION_LAP_TYPE',
         },
+        BUTTON: {
+            DOWNLOAD: 'LABEL.BUTTON.DOWNLOAD',
+        }
     },
 };

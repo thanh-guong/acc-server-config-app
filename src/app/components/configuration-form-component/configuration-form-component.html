@@ -42,6 +42,7 @@
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
-    Save Configuration TODO I18N ME
+    <mat-icon>download</mat-icon>
+    {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
   </button>
 </form>
