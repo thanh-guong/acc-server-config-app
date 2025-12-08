@@ -8,6 +8,8 @@ import { MatOptionModule } from '@angular/material/core';
 import { I18N_KEYS } from '../../../const/i18n-const';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatSelectModule } from '@angular/material/select';
+import { FileService } from '../../services/file-service';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-configuration-form-component',
@@ -19,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatOptionModule,
     TranslateModule,
     MatSelectModule,
+    MatIcon,
   ],
   templateUrl: './configuration-form-component.html',
   styleUrl: './configuration-form-component.css',
@@ -26,13 +29,13 @@ import { MatSelectModule } from '@angular/material/select';
 export class ConfigurationFormComponent {
   I18N_KEYS = I18N_KEYS;
 
-  constructor(private formService: AccConfigurationFormService) { }
+  constructor(private formService: AccConfigurationFormService, private  fileService: FileService) { }
 
   get form(): FormGroup {
     return this.formService.form;
   }
 
   onSubmit(): void {
-    alert(JSON.stringify(this.formService.getValue(), null, 2)); // TODO replace with proper save logic
+    this.fileService.downloadJson("test", this.formService.getValue());
   }
 }
