@@ -2,13 +2,17 @@ import { Injectable } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { AccConfiguration } from '../models/acc-configuration.model';
 import { ACC_CONFIGURATION_VALUES } from '../../const/form-values-const';
+import { BaseFormService } from './base-form-service';
 
 @Injectable({ providedIn: 'root' })
-export class AccConfigurationFormService {
-  form: FormGroup;
+export class AccConfigurationFormService extends BaseFormService<AccConfiguration, NonNullableFormBuilder> {
 
-  constructor(private fb: NonNullableFormBuilder) {
-    this.form = this.fb.group({
+  constructor(fb: NonNullableFormBuilder) {
+    super(fb);
+  }
+
+  override buildFormGroup(): FormGroup {
+    return this.fb.group({
       udpPort: this.fb.control(ACC_CONFIGURATION_VALUES.udpPort.defaultValue, [
         Validators.required,
         Validators.min(ACC_CONFIGURATION_VALUES.udpPort.minValue),
@@ -29,9 +33,5 @@ export class AccConfigurationFormService {
       publicIP: this.fb.control<string | undefined>(ACC_CONFIGURATION_VALUES.publicIP.defaultValue),
       configVersion: this.fb.control(ACC_CONFIGURATION_VALUES.configVersion.defaultValue, Validators.required),
     });
-  }
-  
-  getValue(): AccConfiguration {
-    return this.form.getRawValue() as AccConfiguration;
   }
 }
