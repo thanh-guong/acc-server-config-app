@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatOptionModule } from '@angular/material/core';
 import { I18N_KEYS } from '../../../const/i18n-const';
 import { TranslateModule } from '@ngx-translate/core';
+import { MatSelectModule } from '@angular/material/select';
 
 @Component({
   selector: 'app-configuration-form-component',
@@ -16,7 +17,8 @@ import { TranslateModule } from '@ngx-translate/core';
     MatInputModule,
     MatButtonModule,
     MatOptionModule,
-    TranslateModule
+    TranslateModule,
+    MatSelectModule,
   ],
   templateUrl: './configuration-form-component.html',
   styleUrl: './configuration-form-component.css',
