@@ -144,6 +144,8 @@ export const I18N_KEYS = {
         },
         BUTTON: {
             DOWNLOAD: 'LABEL.BUTTON.DOWNLOAD',
-        }
+        },
+        ENABLED: 'LABEL.ENABLED',
+        DISABLED: 'LABEL.DISABLED',
     },
 };

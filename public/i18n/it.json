@@ -133,6 +133,8 @@
     },
     "BUTTON": {
       "DOWNLOAD": "Scarica"
-    }
+    },
+    "ENABLED": "Abilitato",
+    "DISABLED": "Disabilitato"
   }
 }

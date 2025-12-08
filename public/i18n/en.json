@@ -133,6 +133,8 @@
     },
     "BUTTON": {
       "DOWNLOAD": "Download"
-    }
+    },
+    "ENABLED": "Enabled",
+    "DISABLED": "Disabled"
   }
 }
