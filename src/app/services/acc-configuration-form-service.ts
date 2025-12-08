@@ -28,8 +28,8 @@ export class AccConfigurationFormService extends BaseFormService<AccConfiguratio
         Validators.min(ACC_CONFIGURATION_VALUES.maxConnections.minValue),
         Validators.max(ACC_CONFIGURATION_VALUES.maxConnections.maxValue),
       ]),
-      lanDiscovery: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.lanDiscovery.defaultValue as 0 | 1),
-      registerToLobby: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.registerToLobby.defaultValue as 0 | 1),
+      lanDiscovery: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.lanDiscovery.defaultValue as 0 | 1, Validators.required),
+      registerToLobby: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.registerToLobby.defaultValue as 0 | 1, Validators.required),
       publicIP: this.fb.control<string | undefined>(ACC_CONFIGURATION_VALUES.publicIP.defaultValue),
       configVersion: this.fb.control(ACC_CONFIGURATION_VALUES.configVersion.defaultValue, Validators.required),
     });
