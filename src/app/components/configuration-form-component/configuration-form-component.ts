@@ -10,6 +10,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MatSelectModule } from '@angular/material/select';
 import { FileService } from '../../services/file-service';
 import { MatIcon } from '@angular/material/icon';
+import { BaseInternationalizedComponent } from '../base/base-internationalized-component';
 
 @Component({
   selector: 'app-configuration-form-component',
@@ -26,10 +27,11 @@ import { MatIcon } from '@angular/material/icon';
   templateUrl: './configuration-form-component.html',
   styleUrl: './configuration-form-component.css',
 })
-export class ConfigurationFormComponent {
-  I18N_KEYS = I18N_KEYS;
+export class ConfigurationFormComponent extends BaseInternationalizedComponent {
 
-  constructor(private formService: AccConfigurationFormService, private  fileService: FileService) { }
+  constructor(private formService: AccConfigurationFormService, private  fileService: FileService) {
+    super();
+  }
 
   get form(): FormGroup {
     return this.formService.form;
