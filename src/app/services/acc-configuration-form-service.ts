@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { AccConfiguration } from '../models/acc-configuration.model';
+import { ACC_CONFIGURATION_VALUES } from '../../const/form-values-const';
 
 @Injectable({ providedIn: 'root' })
 export class AccConfigurationFormService {
@@ -8,25 +9,25 @@ export class AccConfigurationFormService {
 
   constructor(private fb: NonNullableFormBuilder) {
     this.form = this.fb.group({
-      udpPort: this.fb.control(9600, [ // TODO constants
+      udpPort: this.fb.control(ACC_CONFIGURATION_VALUES.udpPort.defaultValue, [
         Validators.required,
-        Validators.min(1), // TODO constants
-        Validators.max(65535), // TODO constants
+        Validators.min(ACC_CONFIGURATION_VALUES.udpPort.minValue),
+        Validators.max(ACC_CONFIGURATION_VALUES.udpPort.maxValue),
       ]),
-      tcpPort: this.fb.control(9600, [ // TODO constants
+      tcpPort: this.fb.control(ACC_CONFIGURATION_VALUES.tcpPort.defaultValue, [
         Validators.required,
-        Validators.min(1), // TODO constants
-        Validators.max(65535), // TODO constants
+        Validators.min(ACC_CONFIGURATION_VALUES.tcpPort.minValue),
+        Validators.max(ACC_CONFIGURATION_VALUES.tcpPort.maxValue),
       ]),
-      maxConnections: this.fb.control(10, [ // TODO constants
+      maxConnections: this.fb.control(ACC_CONFIGURATION_VALUES.maxConnections.defaultValue, [
         Validators.required,
-        Validators.min(1), // TODO constants
-        Validators.max(1000), // TODO constants
+        Validators.min(ACC_CONFIGURATION_VALUES.maxConnections.minValue),
+        Validators.max(ACC_CONFIGURATION_VALUES.maxConnections.maxValue),
       ]),
-      lanDiscovery: this.fb.control<0 | 1>(1),
-      registerToLobby: this.fb.control<0 | 1>(1),
-      publicIP: this.fb.control<string | undefined>(undefined),
-      configVersion: this.fb.control(1, Validators.required),
+      lanDiscovery: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.lanDiscovery.defaultValue as 0 | 1),
+      registerToLobby: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.registerToLobby.defaultValue as 0 | 1),
+      publicIP: this.fb.control<string | undefined>(ACC_CONFIGURATION_VALUES.publicIP.defaultValue),
+      configVersion: this.fb.control(ACC_CONFIGURATION_VALUES.configVersion.defaultValue, Validators.required),
     });
   }
   
