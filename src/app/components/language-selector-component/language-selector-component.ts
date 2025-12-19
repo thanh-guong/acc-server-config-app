@@ -1,11 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { MatOption, MatSelect } from '@angular/material/select';
-import { LanguageService } from '../../services/language-service';
 import { CommonModule } from '@angular/common';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { LanguageService } from '../../services/language-service';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-language-selector-component',
-  imports: [MatSelect, MatOption, CommonModule],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatIcon
+  ],
   templateUrl: './language-selector-component.html',
   styleUrl: './language-selector-component.css',
 })

@@ -1,5 +1,9 @@
-<mat-select [value]="currentLanguage" (selectionChange)="onLanguageChange($event.value)">
-    <mat-option *ngFor="let opt of options" [value]="opt.value">
-        {{ opt.label }}
-    </mat-option>
-</mat-select>
+<button mat-button [matMenuTriggerFor]="languageMenu">
+  <mat-icon>language</mat-icon> {{ currentLanguage.toUpperCase() }}
+</button>
+
+<mat-menu #languageMenu="matMenu">
+  <button mat-menu-item *ngFor="let opt of options" (click)="onLanguageChange(opt.value)">
+    {{ opt.label }}
+  </button>
+</mat-menu>
