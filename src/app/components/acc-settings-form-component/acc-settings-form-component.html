@@ -1,0 +1,147 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <!-- SERVER NAME -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SERVER_NAME | translate }}</mat-label>
+    <input matInput type="text" formControlName="serverName">
+  </mat-form-field>
+
+  <!-- ADMIN PASSWORD -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.ADMIN_PASSWORD | translate }}</mat-label>
+    <input matInput type="password" formControlName="adminPassword">
+  </mat-form-field>
+
+  <!-- CAR GROUP -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.CAR_GROUP | translate }}</mat-label>
+    <mat-select formControlName="carGroup">
+      <mat-option *ngFor="let cg of carGroupOptions" [value]="cg.value">
+        {{ cg.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- TRACK MEDALS REQUIREMENT -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.TRACK_MEDALS_REQUIREMENT | translate }}</mat-label>
+    <mat-select formControlName="trackMedalsRequirement">
+      <mat-option *ngFor="let t of trackMedalReqOptions" [value]="t.value">
+        {{ t.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- SAFETY RATING -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SAFETY_RATING_REQUIREMENT | translate }}</mat-label>
+    <input matInput type="number" formControlName="safetyRatingRequirement">
+  </mat-form-field>
+
+  <!-- RACECRAFT RATING -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.RACECRAFT_RATING_REQUIREMENT | translate }}</mat-label>
+    <input matInput type="number" formControlName="racecraftRatingRequirement">
+  </mat-form-field>
+
+  <!-- PASSWORD -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.PASSWORD | translate }}</mat-label>
+    <input matInput type="text" formControlName="password">
+  </mat-form-field>
+
+  <!-- SPECTATOR PASSWORD -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SPECTATOR_PASSWORD | translate }}</mat-label>
+    <input matInput type="text" formControlName="spectatorPassword">
+  </mat-form-field>
+
+  <!-- MAX CAR SLOTS -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.MAX_CAR_SLOTS | translate }}</mat-label>
+    <input matInput type="number" formControlName="maxCarSlots">
+  </mat-form-field>
+
+  <!-- DUMP LEADERBOARDS --> 
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.DUMP_LEADERBOARDS | translate }}</mat-label>
+    <mat-select formControlName="dumpLeaderboards">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- IS RACE LOCKED -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.IS_RACE_LOCKED | translate }}</mat-label>
+    <mat-select formControlName="isRaceLocked">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- RANDOMIZE TRACK WHEN EMPTY -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.RANDOMIZE_TRACK_WHEN_EMPTY | translate }}</mat-label>
+    <mat-select formControlName="randomizeTrackWhenEmpty">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- ALLOW AUTO DQ -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.ALLOW_AUTO_DQ | translate }}</mat-label>
+    <mat-select formControlName="allowAutoDQ">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- SHORT FORMATION LAP -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SHORT_FORMATION_LAP | translate }}</mat-label>
+    <mat-select formControlName="shortFormationLap">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- DUMP ENTRY LIST -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.DUMP_ENTRY_LIST | translate }}</mat-label>
+    <mat-select formControlName="dumpEntryList">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- CENTRAL ENTRY LIST PATH -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.CENTRAL_ENTRY_LIST_PATH | translate }}</mat-label>
+    <input matInput type="text" formControlName="centralEntryListPath">
+  </mat-form-field>
+
+  <!-- FORMATION LAP TYPE -->
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.FORMATION_LAP_TYPE | translate }}</mat-label>
+    <mat-select formControlName="formationLapType">
+      <mat-option *ngFor="let fl of formationLapOptions" [value]="fl.value">
+        {{ fl.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- SUBMIT -->
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+    <mat-icon>download</mat-icon>
+    {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
+  </button>
+
+</form>
