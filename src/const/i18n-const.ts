@@ -28,9 +28,9 @@ export const I18N_KEYS = {
             [DriverCategoryEnum.PLATINUM]: 'LABEL.DRIVER_CATEGORY.PLATINUM',
         },
         FORMATION_LAP_TYPE: {
-            [FormationLapTypeEnum.CLASSIC]: 'LABEL.FORMATION_LAP_TYPE.CLASSIC',
-            [FormationLapTypeEnum.SHORT]: 'LABEL.FORMATION_LAP_TYPE.SHORT',
-            [FormationLapTypeEnum.CUTSCENE]: 'LABEL.FORMATION_LAP_TYPE.CUTSCENE',
+            [FormationLapTypeEnum.CLASSIC]: `LABEL.FORMATION_LAP_TYPE.${FormationLapTypeEnum.CLASSIC}`,
+            [FormationLapTypeEnum.SHORT]: `LABEL.FORMATION_LAP_TYPE.${FormationLapTypeEnum.SHORT}`,
+            [FormationLapTypeEnum.CUTSCENE]: `LABEL.FORMATION_LAP_TYPE.${FormationLapTypeEnum.CUTSCENE}`,
         },
         QUALIFY_STANDING_TYPE: {
             [QualifyStandingTypeEnum.FASTEST_LAP]: 'LABEL.QUALIFY_STANDING_TYPE.FASTEST_LAP',
@@ -45,10 +45,10 @@ export const I18N_KEYS = {
             [SessionTypeEnum.WARMUP]: 'LABEL.SESSION_TYPE.WARMUP',
         },
         TRACK_MEDALS_REQUIREMENT: {
-            [TrackMedalsRequirementEnum.NONE]: 'LABEL.TRACK_MEDALS_REQUIREMENT.NONE',
-            [TrackMedalsRequirementEnum.BRONZE]: 'LABEL.TRACK_MEDALS_REQUIREMENT.BRONZE',
-            [TrackMedalsRequirementEnum.SILVER]: 'LABEL.TRACK_MEDALS_REQUIREMENT.SILVER',
-            [TrackMedalsRequirementEnum.GOLD]: 'LABEL.TRACK_MEDALS_REQUIREMENT.GOLD',
+            [TrackMedalsRequirementEnum.NONE]: `LABEL.TRACK_MEDALS_REQUIREMENT.${TrackMedalsRequirementEnum.NONE}`,
+            [TrackMedalsRequirementEnum.BRONZE]: `LABEL.TRACK_MEDALS_REQUIREMENT.${TrackMedalsRequirementEnum.BRONZE}`,
+            [TrackMedalsRequirementEnum.SILVER]: `LABEL.TRACK_MEDALS_REQUIREMENT.${TrackMedalsRequirementEnum.SILVER}`,
+            [TrackMedalsRequirementEnum.GOLD]: `LABEL.TRACK_MEDALS_REQUIREMENT.${TrackMedalsRequirementEnum.GOLD}`,
         },
         ACC_CONFIGURATION: {
             UDP_PORT: 'LABEL.ACC_CONFIGURATION.UDP_PORT',
