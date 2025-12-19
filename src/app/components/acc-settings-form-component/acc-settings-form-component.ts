@@ -17,6 +17,7 @@ import { AccSettingsFormService } from '../../services/acc-settings-form-service
 import { CarGroupsEnum } from '../../enum/car-groups.enum';
 import { FormationLapTypeEnum } from '../../enum/formation-lap-type.enum';
 import { TrackMedalsRequirementEnum } from '../../enum/track-medal-requirement.enum';
+import { FILENAME_CONSTANTS } from '../../../const/file-const';
 
 @Component({
   selector: 'app-acc-settings-form-component',
@@ -85,6 +86,6 @@ export class AccSettingsFormComponent
   }
 
   protected override onSubmit(): void {
-    this.fileService.downloadJson('acc-settings', this.formService.getValue());
+    this.fileService.downloadJson(FILENAME_CONSTANTS.SETTINGS, this.formService.getValue());
   }
 }

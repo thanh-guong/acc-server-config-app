@@ -12,6 +12,7 @@ import { MatIcon } from '@angular/material/icon';
 import { AccConfiguration } from '../../models/acc-configuration.model';
 import { BaseInternationalizedFormComponent } from '../base/base-internationalized-form-component';
 import { CommonModule } from '@angular/common';
+import { FILENAME_CONSTANTS } from '../../../const/file-const';
 
 @Component({
   selector: 'app-configuration-form-component',
@@ -37,10 +38,6 @@ export class ConfigurationFormComponent extends BaseInternationalizedFormCompone
     super(formService);
   }
 
-  protected override onSubmit(): void {
-    this.fileService.downloadJson("test", this.formService.getValue());
-  }
-
   ngOnInit(): void {
     this.translate.stream([this.I18N_KEYS.LABEL.ENABLED, this.I18N_KEYS.LABEL.DISABLED])
       .subscribe(translations => {
@@ -49,5 +46,9 @@ export class ConfigurationFormComponent extends BaseInternationalizedFormCompone
           { value: 0, label: translations[this.I18N_KEYS.LABEL.DISABLED] }
         ];
     });
+  }
+
+  protected override onSubmit(): void {
+    this.fileService.downloadJson(FILENAME_CONSTANTS.CONFIGURATION, this.formService.getValue());
   }
 }
