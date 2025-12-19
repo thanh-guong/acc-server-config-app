@@ -1,3 +1,7 @@
+import { CarGroupsEnum } from "../app/enum/car-groups.enum";
+import { FormationLapTypeEnum } from "../app/enum/formation-lap-type.enum";
+import { TrackMedalsRequirementEnum } from "../app/enum/track-medal-requirement.enum";
+
 export const ACC_CONFIGURATION_VALUES = {
     udpPort: {
         minValue: 1,
@@ -25,5 +29,65 @@ export const ACC_CONFIGURATION_VALUES = {
     },
     configVersion: {
       defaultValue: 1,
-    }, 
+    },
+};
+
+export const ACC_SETTINGS_VALUES = {
+    serverName: {
+        defaultValue: '',
+    },
+    adminPassword: {
+        defaultValue: '',
+    },
+    carGroup: {
+        defaultValue: CarGroupsEnum.FREE_FOR_ALL,
+    },
+    trackMedalsRequirement: {
+        defaultValue: TrackMedalsRequirementEnum.NONE,
+    },
+    safetyRatingRequirement: {
+        defaultValue: 0,
+        minValue: 0,
+        maxValue: 99,
+    },
+    racecraftRatingRequirement: {
+        defaultValue: 0,
+        minValue: 0,
+        maxValue: 99,
+    },
+    password: {
+        defaultValue: undefined,
+    },
+    spectatorPassword: {
+        defaultValue: undefined,
+    },
+    maxCarSlots: {
+        defaultValue: 20,
+        minValue: 1,
+        maxValue: 100,
+    },
+    dumpLeaderboards: {
+        defaultValue: 0 as 0 | 1,
+    },
+    isRaceLocked: {
+        defaultValue: 0 as 0 | 1,
+    },
+    randomizeTrackWhenEmpty: {
+        defaultValue: 0 as 0 | 1,
+    },
+    centralEntryListPath: {
+        defaultValue: undefined,
+    },
+    allowAutoDQ: {
+        defaultValue: 1 as 0 | 1,
+    },
+    shortFormationLap: {
+        defaultValue: 0 as 0 | 1,
+    },
+    dumpEntryList: {
+        defaultValue: 0 as 0 | 1,
+    },
+    formationLapType: {
+        defaultValue: FormationLapTypeEnum.CLASSIC,
+    },
 };
