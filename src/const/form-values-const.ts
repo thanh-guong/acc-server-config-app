@@ -1,5 +1,6 @@
 import { CarGroupsEnum } from "../app/enum/car-groups.enum";
 import { FormationLapTypeEnum } from "../app/enum/formation-lap-type.enum";
+import { QualifyStandingTypeEnum } from "../app/enum/qualify-standing-type.enum";
 import { TrackMedalsRequirementEnum } from "../app/enum/track-medal-requirement.enum";
 
 export const ACC_CONFIGURATION_VALUES = {
@@ -121,5 +122,52 @@ export const ASSIST_RULES_VALUES = {
     },
     disableIdealLine: {
         defaultValue: 0 as 0 | 1,
+    },
+};
+
+export const EVENT_RULES_VALUES = {
+    qualifyStandingType: {
+        defaultValue: QualifyStandingTypeEnum.FASTEST_LAP,
+    },
+    pitWindowLengthSec: {
+        defaultValue: -1,
+        minValue: -1,
+    },
+    driverStintTimeSec: {
+        defaultValue: -1,
+        minValue: -1,
+    },
+    mandatoryPitstopCount: {
+        defaultValue: 0,
+        minValue: 0,
+    },
+    maxTotalDrivingTime: {
+        defaultValue: -1,
+        minValue: -1,
+    },
+    maxDriversCount: {
+        defaultValue: 1,
+        minValue: 1,
+    },
+
+    isRefuellingAllowedInRace: {
+        defaultValue: true as boolean,
+    },
+    isRefuellingTimeFixed: {
+        defaultValue: false as boolean,
+    },
+    isMandatoryPitstopRefuellingRequired: {
+        defaultValue: false as boolean,
+    },
+    isMandatoryPitstopTyreChangeRequired: {
+        defaultValue: false as boolean,
+    },
+    isMandatoryPitstopSwapDriverRequired: {
+        defaultValue: false as boolean,
+    },
+    tyreSetCount: {
+        defaultValue: 1,
+        minValue: 1,
+        maxValue: 50,
     },
 };

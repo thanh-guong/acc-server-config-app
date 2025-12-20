@@ -1,0 +1,100 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- QUALIFY STANDING TYPE -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.QUALIFY_STANDING_TYPE | translate }}</mat-label>
+        <input matInput type="number" formControlName="qualifyStandingType">
+    </mat-form-field>
+
+    <!-- PIT WINDOW LENGTH SEC -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.PIT_WINDOW_LENGTH_SEC | translate }}</mat-label>
+        <input matInput type="number" formControlName="pitWindowLengthSec">
+    </mat-form-field>
+
+    <!-- DRIVER STINT TIME SEC -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.DRIVER_STINT_TIME_SEC | translate }}</mat-label>
+        <input matInput type="number" formControlName="driverStintTimeSec">
+    </mat-form-field>
+
+    <!-- MANDATORY PITSTOP COUNT -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.MANDATORY_PITSTOP_COUNT | translate }}</mat-label>
+        <input matInput type="number" formControlName="mandatoryPitstopCount">
+    </mat-form-field>
+
+    <!-- MAX TOTAL DRIVING TIME -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.MAX_TOTAL_DRIVING_TIME | translate }}</mat-label>
+        <input matInput type="number" formControlName="maxTotalDrivingTime">
+    </mat-form-field>
+
+    <!-- MAX DRIVERS COUNT -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.MAX_DRIVERS_COUNT | translate }}</mat-label>
+        <input matInput type="number" formControlName="maxDriversCount">
+    </mat-form-field>
+
+    <!-- IS REFUELLING ALLOWED IN RACE -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_REFUELLING_ALLOWED_IN_RACE | translate }}</mat-label>
+        <mat-select formControlName="isRefuellingAllowedInRace">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- IS REFUELLING TIME FIXED -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_REFUELLING_TIME_FIXED | translate }}</mat-label>
+        <mat-select formControlName="isRefuellingTimeFixed">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- IS MANDATORY PITSTOP REFUELLING REQUIRED -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_MANDATORY_PITSTOP_REFUELLING_REQUIRED | translate }}</mat-label>
+        <mat-select formControlName="isMandatoryPitstopRefuellingRequired">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- IS MANDATORY PITSTOP TYRE CHANGE REQUIRED -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_MANDATORY_PITSTOP_TYRE_CHANGE_REQUIRED | translate }}</mat-label>
+        <mat-select formControlName="isMandatoryPitstopTyreChangeRequired">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- IS MANDATORY PITSTOP SWAP DRIVER REQUIRED -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_MANDATORY_PITSTOP_SWAP_DRIVER_REQUIRED | translate }}</mat-label>
+        <mat-select formControlName="isMandatoryPitstopSwapDriverRequired">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- TYRE SET COUNT -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.TYRE_SET_COUNT | translate }}</mat-label>
+        <input matInput type="number" formControlName="tyreSetCount">
+    </mat-form-field>
+
+    <!-- SUBMIT -->
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        <mat-icon>download</mat-icon>
+        {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
+    </button>
+</form>
