@@ -1,0 +1,94 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Stability Control Level Max -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.STABILITY_CONTROL_LEVEL_MAX | translate }}</mat-label>
+        <input matInput type="number" formControlName="stabilityControlLevelMax">
+    </mat-form-field>
+
+    <!-- DISABLE AUTOSTEER -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTOSTEER | translate }}</mat-label>
+        <mat-select formControlName="disableAutosteer">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE AUTO LIGHTS -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_LIGHTS | translate }}</mat-label>
+        <mat-select formControlName="disableAutoLights">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE AUTO WIPER -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_WIPER | translate }}</mat-label>
+        <mat-select formControlName="disableAutoWiper">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE AUTO ENGINE START -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_ENGINE_START | translate }}</mat-label>
+        <mat-select formControlName="disableAutoEngineStart">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE AUTO PIT LIMITER -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_PIT_LIMITER | translate }}</mat-label>
+        <mat-select formControlName="disableAutoPitLimiter">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE AUTO GEAR -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_GEAR | translate }}</mat-label>
+        <mat-select formControlName="disableAutoGear">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE AUTO CLUTCH -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_CLUTCH | translate }}</mat-label>
+        <mat-select formControlName="disableAutoClutch">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- DISABLE IDEAL LINE -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_IDEAL_LINE | translate }}</mat-label>
+        <mat-select formControlName="disableIdealLine">
+            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+                {{ opt.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- SUBMIT -->
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        <mat-icon>download</mat-icon>
+        {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
+    </button>
+</form>

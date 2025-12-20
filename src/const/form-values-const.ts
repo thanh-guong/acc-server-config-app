@@ -19,16 +19,16 @@ export const ACC_CONFIGURATION_VALUES = {
         defaultValue: 10,
     },
     lanDiscovery: {
-      defaultValue: 1,
+        defaultValue: 1,
     },
     registerToLobby: {
-      defaultValue: 1,
+        defaultValue: 1,
     },
     publicIP: {
-      defaultValue: undefined,
+        defaultValue: undefined,
     },
     configVersion: {
-      defaultValue: 1,
+        defaultValue: 1,
     },
 };
 
@@ -89,5 +89,37 @@ export const ACC_SETTINGS_VALUES = {
     },
     formationLapType: {
         defaultValue: FormationLapTypeEnum.CLASSIC,
+    },
+};
+
+export const ASSIST_RULES_VALUES = {
+    stabilityControlLevelMax: {
+        defaultValue: 100,
+        minValue: 0,
+        maxValue: 100,
+    },
+    disableAutosteer: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableAutoLights: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableAutoWiper: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableAutoEngineStart: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableAutoPitLimiter: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableAutoGear: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableAutoClutch: {
+        defaultValue: 0 as 0 | 1,
+    },
+    disableIdealLine: {
+        defaultValue: 0 as 0 | 1,
     },
 };
