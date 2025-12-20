@@ -6,10 +6,15 @@ import { APP_CONSTANTS } from '../const/app-const';
 import { LanguageService } from './services/language-service';
 import { I18N_KEYS } from '../const/i18n-const';
 import { ToolbarComponent } from './components/toolbar-component/toolbar-component';
+import { ConfigurationFormComponent } from './components/configuration-form-component/configuration-form-component';
+import { AccSettingsFormComponent } from './components/acc-settings-form-component/acc-settings-form-component';
+import { LanguageSelectorComponent } from './components/language-selector-component/language-selector-component';
+import { AssistRulesFormComponent } from './components/assist-rules-form-component/assist-rules-form-component';
+import { EventRulesFormComponent } from './components/event-rules-form-component/event-rules-form-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslatePipe, TranslateDirective, ToolbarComponent],
+  imports: [RouterOutlet, TranslatePipe, TranslateDirective, ToolbarComponent, ConfigurationFormComponent, AccSettingsFormComponent, LanguageSelectorComponent, AssistRulesFormComponent, EventRulesFormComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
