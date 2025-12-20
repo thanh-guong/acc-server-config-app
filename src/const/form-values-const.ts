@@ -1,7 +1,9 @@
 import { CarGroupsEnum } from "../app/enum/car-groups.enum";
 import { FormationLapTypeEnum } from "../app/enum/formation-lap-type.enum";
 import { QualifyStandingTypeEnum } from "../app/enum/qualify-standing-type.enum";
+import { SessionTypeEnum } from "../app/enum/session-type.enum";
 import { TrackMedalsRequirementEnum } from "../app/enum/track-medal-requirement.enum";
+import { TrackNameEnum } from "../app/enum/track-name.enum";
 
 export const ACC_CONFIGURATION_VALUES = {
     udpPort: {
@@ -170,4 +172,84 @@ export const EVENT_RULES_VALUES = {
         minValue: 1,
         maxValue: 50,
     },
+};
+
+export const EVENT_VALUES = {
+    track: {
+        defaultValue: TrackNameEnum.SPA,
+    },
+
+    preRaceWaitingTimeSeconds: {
+        defaultValue: 60,
+        minValue: 30,
+    },
+
+    sessionOverTimeSeconds: {
+        defaultValue: 120,
+        minValue: 0,
+    },
+
+    ambientTemp: {
+        defaultValue: 20,
+    },
+
+    cloudLevel: {
+        defaultValue: 0.3,
+        minValue: 0,
+        maxValue: 1,
+    },
+
+    rain: {
+        defaultValue: 0.0,
+        minValue: 0,
+        maxValue: 1,
+    },
+
+    weatherRandomness: {
+        defaultValue: 0,
+        minValue: 0,
+        maxValue: 7,
+    },
+
+    configVersion: {
+        defaultValue: 1,
+    },
+
+    postQualySeconds: {
+        defaultValue: 30,
+        minValue: 1,
+    },
+
+    postRaceSeconds: {
+        defaultValue: 30,
+        minValue: 1,
+    },
+
+    /* TODO manage these default values for sessions
+    sessions: {
+        defaultValue: [
+            {
+                hourOfDay: 10,
+                dayOfWeekend: 1,
+                timeMultiplier: 1,
+                sessionType: SessionTypeEnum.FREE_PRACTICE,
+                sessionDurationMinutes: 20,
+            },
+            {
+                hourOfDay: 17,
+                dayOfWeekend: 2,
+                timeMultiplier: 8,
+                sessionType: SessionTypeEnum.QUALIFY,
+                sessionDurationMinutes: 10,
+            },
+            {
+                hourOfDay: 16,
+                dayOfWeekend: 3,
+                timeMultiplier: 3,
+                sessionType: SessionTypeEnum.RACE,
+                sessionDurationMinutes: 20,
+            },
+        ],
+    },
+    */
 };
