@@ -28,7 +28,7 @@ import { FILENAME_CONSTANTS } from '../../../const/file-const';
     MatIcon,
   ],
   templateUrl: './configuration-form-component.html',
-  styleUrl: './configuration-form-component.css',
+  styleUrl: './configuration-form-component.scss',
 })
 export class ConfigurationFormComponent extends BaseInternationalizedFormComponent<AccConfiguration, AccConfigurationFormService> implements OnInit{
   

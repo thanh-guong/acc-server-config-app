@@ -28,7 +28,7 @@ import { CommonModule } from '@angular/common';
     MatIcon,
   ],
   templateUrl: './assist-rules-form-component.html',
-  styleUrl: './assist-rules-form-component.css',
+  styleUrl: './assist-rules-form-component.scss',
 })
 export class AssistRulesFormComponent
   extends BaseInternationalizedFormComponent<AssistRules, AssistRulesService>

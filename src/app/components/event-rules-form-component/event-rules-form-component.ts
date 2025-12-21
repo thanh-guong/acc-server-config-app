@@ -28,7 +28,7 @@ import { MatIcon } from '@angular/material/icon';
     MatIcon,
   ],
   templateUrl: './event-rules-form-component.html',
-  styleUrl: './event-rules-form-component.css',
+  styleUrl: './event-rules-form-component.scss',
 })
 export class EventRulesFormComponent
   extends BaseInternationalizedFormComponent<EventRules, EventRulesFormService>
