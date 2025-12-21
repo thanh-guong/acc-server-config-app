@@ -138,6 +138,15 @@
     </mat-select>
   </mat-form-field>
 
+  <mat-form-field appearance="outline">
+    <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.IGNORE_PREMATURE_DISCONNECTS | translate }}</mat-label>
+    <mat-select formControlName="ignorePrematureDisconnects">
+      <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+        {{ opt.label }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
   <!-- SUBMIT -->
   <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
     <mat-icon>download</mat-icon>

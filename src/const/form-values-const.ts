@@ -91,6 +91,9 @@ export const ACC_SETTINGS_VALUES = {
     formationLapType: {
         defaultValue: FormationLapTypeEnum.CLASSIC,
     },
+    ignorePrematureDisconnects: {
+        defaultValue: 1 as 0 | 1,
+    }
 };
 
 export const ASSIST_RULES_VALUES = {

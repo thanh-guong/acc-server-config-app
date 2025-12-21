@@ -54,6 +54,7 @@ export class AccSettingsFormService extends BaseFormService<AccSettings, NonNull
       shortFormationLap: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.shortFormationLap.defaultValue as 0 | 1, Validators.required),
       dumpEntryList: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.dumpEntryList.defaultValue as 0 | 1, Validators.required),
       formationLapType: this.fb.control<FormationLapTypeEnum>(ACC_SETTINGS_VALUES.formationLapType.defaultValue, Validators.required),
+      ignorePrematureDisconnects: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.ignorePrematureDisconnects.defaultValue as 0 | 1, Validators.required),
     });
   }
 }

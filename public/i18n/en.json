@@ -129,7 +129,8 @@
       "ALLOW_AUTO_DQ": "Allow Auto DQ",
       "SHORT_FORMATION_LAP": "Short Formation Lap",
       "DUMP_ENTRY_LIST": "Dump Entry List",
-      "FORMATION_LAP_TYPE": "Formation Lap Type"
+      "FORMATION_LAP_TYPE": "Formation Lap Type",
+      "IGNORE_PREMATURE_DISCONNECTS": "Ignore Premature Disconnects"
     },
     "BUTTON": {
       "DOWNLOAD": "Download"
