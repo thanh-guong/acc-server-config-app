@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
-import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormArray, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { BaseFormService } from './base-form-service';
 import { EVENT_VALUES } from '../../const/form-values-const';
+import { EventConfig } from '../models/acc-event.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class EventFormService extends BaseFormService<Event, NonNullableFormBuilder> {
+export class EventFormService extends BaseFormService<EventConfig, NonNullableFormBuilder> {
 
   constructor(fb: NonNullableFormBuilder) {
     super(fb);
@@ -48,8 +49,41 @@ export class EventFormService extends BaseFormService<Event, NonNullableFormBuil
         Validators.required,
         Validators.min(EVENT_VALUES.postRaceSeconds.minValue),
       ]),
-      // TODO session
+      sessions: this.fb.array([]),
     });
+  }
 
+  createSession(): FormGroup {
+    return this.fb.group({
+      hourOfDay: this.fb.control(EVENT_VALUES.sessions.hourOfDay, [
+        Validators.required,
+        Validators.min(EVENT_VALUES.sessions.hourOfDay.minValue),
+        Validators.max(EVENT_VALUES.sessions.hourOfDay.maxValue),
+      ]),
+      dayOfWeekend: this.fb.control(EVENT_VALUES.sessions.dayOfWeekend, [
+        Validators.required,
+        Validators.min(EVENT_VALUES.sessions.dayOfWeekend.minValue),
+        Validators.max(EVENT_VALUES.sessions.dayOfWeekend.maxValue),
+      ]),
+      timeMultiplier: this.fb.control(EVENT_VALUES.sessions.timeMultiplier, [
+        Validators.required,
+        Validators.min(EVENT_VALUES.sessions.timeMultiplier.minValue),
+        Validators.max(EVENT_VALUES.sessions.timeMultiplier.maxValue),
+      ]),
+      sessionType: this.fb.control(EVENT_VALUES.sessions.sessionType, [Validators.required]),
+      sessionDurationMinutes: this.fb.control(EVENT_VALUES.sessions.sessionDurationMinutes, [Validators.required,]),
+    });
+  }
+
+  getSessions(): FormArray {
+    return this.form.get('sessions') as FormArray;
+  }
+
+  addSession() {
+    this.getSessions().push(this.createSession());
+  }
+
+  removeSession(index: number) {
+    this.getSessions().removeAt(index);
   }
 }

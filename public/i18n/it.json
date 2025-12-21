@@ -137,7 +137,8 @@
       "FORMATION_LAP_TYPE": "Tipo Giro di Formazione"
     },
     "BUTTON": {
-      "DOWNLOAD": "Scarica"
+      "DOWNLOAD": "Scarica",
+      "ADD_SESSION": "Aggiungi Sessione"
     },
     "ENABLED": "Abilitato",
     "DISABLED": "Disabilitato"

@@ -137,7 +137,8 @@
       "FORMATION_LAP_TYPE": "Formation Lap Type"
     },
     "BUTTON": {
-      "DOWNLOAD": "Download"
+      "DOWNLOAD": "Download",
+      "ADD_SESSION": "Add Session"
     },
     "ENABLED": "Enabled",
     "DISABLED": "Disabled"
