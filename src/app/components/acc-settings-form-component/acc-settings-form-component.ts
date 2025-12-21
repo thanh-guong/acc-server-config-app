@@ -33,7 +33,7 @@ import { FILENAME_CONSTANTS } from '../../../const/file-const';
     MatIcon,
   ],
   templateUrl: './acc-settings-form-component.html',
-  styleUrl: './acc-settings-form-component.css',
+  styleUrl: './acc-settings-form-component.scss',
 })
 export class AccSettingsFormComponent
   extends BaseInternationalizedFormComponent<AccSettings, AccSettingsFormService>

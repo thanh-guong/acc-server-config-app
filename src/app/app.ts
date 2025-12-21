@@ -16,7 +16,7 @@ import { EventRulesFormComponent } from './components/event-rules-form-component
   selector: 'app-root',
   imports: [RouterOutlet, TranslatePipe, TranslateDirective, ToolbarComponent, ConfigurationFormComponent, AccSettingsFormComponent, LanguageSelectorComponent, AssistRulesFormComponent, EventRulesFormComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.scss'
 })
 export class App {
   readonly applicationName = APP_CONSTANTS.name;

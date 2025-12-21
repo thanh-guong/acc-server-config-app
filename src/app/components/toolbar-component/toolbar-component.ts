@@ -7,7 +7,7 @@ import { LanguageSelectorComponent } from '../language-selector-component/langua
   selector: 'app-toolbar-component',
   imports: [MatToolbar, LanguageSelectorComponent],
   templateUrl: './toolbar-component.html',
-  styleUrl: './toolbar-component.css',
+  styleUrl: './toolbar-component.scss',
 })
 export class ToolbarComponent {
   readonly applicationName = APP_CONSTANTS.name;

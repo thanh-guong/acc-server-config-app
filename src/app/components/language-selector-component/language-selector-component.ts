@@ -15,7 +15,7 @@ import { MatIcon } from '@angular/material/icon';
     MatIcon
   ],
   templateUrl: './language-selector-component.html',
-  styleUrl: './language-selector-component.css',
+  styleUrl: './language-selector-component.scss',
 })
 export class LanguageSelectorComponent implements OnInit {
   options: { value: string; label: string }[] = [];
