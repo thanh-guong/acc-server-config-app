@@ -4,6 +4,7 @@ import { QualifyStandingTypeEnum } from "../app/enum/qualify-standing-type.enum"
 import { SessionTypeEnum } from "../app/enum/session-type.enum";
 import { TrackMedalsRequirementEnum } from "../app/enum/track-medal-requirement.enum";
 import { TrackNameEnum } from "../app/enum/track-name.enum";
+import { DayOfWeekendEnum } from "../app/enum/day-of-weekend-enum";
 
 export const ACC_CONFIGURATION_VALUES = {
     udpPort: {
@@ -225,31 +226,28 @@ export const EVENT_VALUES = {
         minValue: 1,
     },
 
-    /* TODO manage these default values for sessions
     sessions: {
-        defaultValue: [
-            {
-                hourOfDay: 10,
-                dayOfWeekend: 1,
-                timeMultiplier: 1,
-                sessionType: SessionTypeEnum.FREE_PRACTICE,
-                sessionDurationMinutes: 20,
-            },
-            {
-                hourOfDay: 17,
-                dayOfWeekend: 2,
-                timeMultiplier: 8,
-                sessionType: SessionTypeEnum.QUALIFY,
-                sessionDurationMinutes: 10,
-            },
-            {
-                hourOfDay: 16,
-                dayOfWeekend: 3,
-                timeMultiplier: 3,
-                sessionType: SessionTypeEnum.RACE,
-                sessionDurationMinutes: 20,
-            },
-        ],
-    },
-    */
+        hourOfDay: {
+            defaultValue: 10,
+            minValue: 0,
+            maxValue: 23,
+        },
+        dayOfWeekend: {
+            defaultValue: DayOfWeekendEnum.FRIDAY,
+            minValue: DayOfWeekendEnum.FRIDAY,
+            maxValue: DayOfWeekendEnum.SUNDAY,
+        },
+        timeMultiplier: {
+            defaultValue: 1,
+            minValue: 0,
+            maxValue: 24,
+        },
+        sessionType: {
+            defaultValue: SessionTypeEnum.FREE_PRACTICE,
+        },
+        sessionDurationMinutes: {
+            defaultValue: 20,
+        },
+
+    }
 };

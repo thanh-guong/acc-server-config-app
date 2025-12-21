@@ -41,6 +41,11 @@
       "2": "Argento",
       "3": "Oro"
     },
+    "DAY_OF_WEEKEND": {
+      "1": "Venerdì",
+      "2": "Sabato",
+      "3": "Domenica"
+    },
     "ACC_CONFIGURATION": {
       "UDP_PORT": "Porta UDP",
       "TCP_PORT": "Porta TCP",
