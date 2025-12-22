@@ -3,7 +3,11 @@
     <!-- TRACK -->
     <mat-form-field appearance="outline">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.TRACK | translate }}</mat-label>
-        <input matInput type="text" formControlName="track">
+            <mat-select formControlName="track">
+            <mat-option *ngFor="let t of trackOptions" [value]="t.value">
+                {{ t.label }}
+            </mat-option>
+        </mat-select>
     </mat-form-field>
 
     <!-- PRE RACE WAITING TIME -->
@@ -81,9 +85,11 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.SESSION_TYPE | translate }}</mat-label>
-                <mat-select formControlName="sessionType">
-                    <mat-option *ngFor="let type of sessionTypes" [value]="type">{{ type }}</mat-option>
-                </mat-select>
+                    <mat-select formControlName="sessionType">
+                    <mat-option *ngFor="let s of sessionTypesOptions" [value]="s.value">
+                        {{ s.label }}
+                    </mat-option>
+                    </mat-select>
             </mat-form-field>
 
             <mat-form-field appearance="outline">

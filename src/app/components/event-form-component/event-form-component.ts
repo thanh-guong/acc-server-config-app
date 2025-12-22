@@ -12,8 +12,9 @@ import { SessionTypeEnum } from '../../enum/session-type.enum';
 import { EventConfig } from '../../models/acc-event.model';
 import { BaseInternationalizedFormComponent } from '../base/base-internationalized-form-component';
 import { FileService } from '../../services/file-service';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { isString, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FILENAME_CONSTANTS } from '../../../const/file-const';
+import { TrackNameEnum } from '../../enum/track-name.enum';
 
 @Component({
   selector: 'app-event-form-component',
@@ -36,7 +37,8 @@ export class EventFormComponent
   extends BaseInternationalizedFormComponent<EventConfig, EventFormService>
   implements OnInit {
 
-  sessionTypes = Object.values(SessionTypeEnum);
+  sessionTypesOptions: { value: SessionTypeEnum; label: string }[] = [];
+  trackOptions: { value: TrackNameEnum; label: string }[] = [];
 
   constructor(
     protected override formService: EventFormService,
@@ -46,7 +48,26 @@ export class EventFormComponent
     super(formService);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const sessionTypesEnumValues = Object.values(SessionTypeEnum);
+    const trackNameEnumValues = Object.values(TrackNameEnum);
+
+    this.translate
+      .stream([
+        ...sessionTypesEnumValues.map(st => this.I18N_KEYS.LABEL.SESSION_TYPE[st]),
+        ...trackNameEnumValues.map(tn => this.LABELS.TRACK_NAME[tn]),
+      ])
+      .subscribe(tr => {
+        this.sessionTypesOptions = sessionTypesEnumValues.map(st => ({
+          value: st,
+          label: isString(this.I18N_KEYS.LABEL.SESSION_TYPE[st]) ? tr[this.I18N_KEYS.LABEL.SESSION_TYPE[st]] : '',
+        }));
+        this.trackOptions = trackNameEnumValues.map(t => ({
+          value: t,
+          label: isString(this.LABELS.TRACK_NAME[t]) ? tr[this.LABELS.TRACK_NAME[t]] : '',
+        }));
+      });
+  }
 
   get sessions(): FormArray {
     return this.formService.getSessions();

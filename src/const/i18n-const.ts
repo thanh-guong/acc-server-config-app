@@ -37,12 +37,12 @@ export const I18N_KEYS = {
             [QualifyStandingTypeEnum.AVERAGE_LAP]: 'LABEL.QUALIFY_STANDING_TYPE.AVERAGE_LAP',
         },
         SESSION_TYPE: {
-            [SessionTypeEnum.PRACTICE]: 'LABEL.SESSION_TYPE.PRACTICE',
-            [SessionTypeEnum.QUALIFY]: 'LABEL.SESSION_TYPE.QUALIFY',
-            [SessionTypeEnum.RACE]: 'LABEL.SESSION_TYPE.RACE',
-            [SessionTypeEnum.HOTSTINT]: 'LABEL.SESSION_TYPE.HOTSTINT',
-            [SessionTypeEnum.FREE_PRACTICE]: 'LABEL.SESSION_TYPE.FREE_PRACTICE',
-            [SessionTypeEnum.WARMUP]: 'LABEL.SESSION_TYPE.WARMUP',
+            [SessionTypeEnum.PRACTICE]: `LABEL.SESSION_TYPE.${SessionTypeEnum.PRACTICE}`,
+            [SessionTypeEnum.QUALIFY]: `LABEL.SESSION_TYPE.${SessionTypeEnum.QUALIFY}`,
+            [SessionTypeEnum.RACE]: `LABEL.SESSION_TYPE.${SessionTypeEnum.RACE}`,
+            [SessionTypeEnum.HOTSTINT]: `LABEL.SESSION_TYPE.${SessionTypeEnum.HOTSTINT}`,
+            [SessionTypeEnum.FREE_PRACTICE]: `LABEL.SESSION_TYPE.${SessionTypeEnum.FREE_PRACTICE}`,
+            [SessionTypeEnum.WARMUP]: `LABEL.SESSION_TYPE.${SessionTypeEnum.WARMUP}`,
         },
         TRACK_MEDALS_REQUIREMENT: {
             [TrackMedalsRequirementEnum.NONE]: `LABEL.TRACK_MEDALS_REQUIREMENT.${TrackMedalsRequirementEnum.NONE}`,
