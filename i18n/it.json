@@ -1,0 +1,148 @@
+{
+  "I18N_TEST": "i18n_test_it",
+  "MESSAGE": {
+    "INFO": {
+      "INFO_TEST": "info_test_it"
+    },
+    "DEBUG": {
+      "DEBUG_TEST": "debug_test_it"
+    },
+    "ERROR": {
+      "ERROR_TEST": "error_test_it"
+    }
+  },
+  "LABEL": {
+    "DRIVER_CATEGORY": {
+      "0": "Bronzo",
+      "1": "Argento",
+      "2": "Oro",
+      "3": "Platino"
+    },
+    "FORMATION_LAP_TYPE": {
+      "0": "Classica",
+      "1": "Corta",
+      "3": "Cutscene"
+    },
+    "QUALIFY_STANDING_TYPE": {
+      "1": "Giro più veloce",
+      "2": "Giro medio"
+    },
+    "SESSION_TYPE": {
+      "P": "Prove",
+      "Q": "Qualifica",
+      "R": "Gara",
+      "H": "Hotstint",
+      "F": "Free Practice",
+      "W": "Warmup"
+    },
+    "TRACK_MEDALS_REQUIREMENT": {
+      "0": "Nessuna",
+      "1": "Bronzo",
+      "2": "Argento",
+      "3": "Oro"
+    },
+    "DAY_OF_WEEKEND": {
+      "1": "Venerdì",
+      "2": "Sabato",
+      "3": "Domenica"
+    },
+    "ACC_CONFIGURATION": {
+      "UDP_PORT": "Porta UDP",
+      "TCP_PORT": "Porta TCP",
+      "MAX_CONNECTIONS": "Connessioni Massime",
+      "LAN_DISCOVERY": "Scoperta LAN",
+      "REGISTER_TO_LOBBY": "Registrazione Lobby",
+      "PUBLIC_IP": "IP Pubblico",
+      "CONFIG_VERSION": "Versione Config"
+    },
+    "ASSIST_RULES": {
+      "STABILITY_CONTROL_LEVEL_MAX": "Livello Massimo Controllo Stabilità",
+      "DISABLE_AUTOSTEER": "Disabilita Autosteer",
+      "DISABLE_AUTO_LIGHTS": "Disabilita Luci Automatiche",
+      "DISABLE_AUTO_WIPER": "Disabilita Tergicristallo Automatico",
+      "DISABLE_AUTO_ENGINE_START": "Disabilita Avvio Automatico Motore",
+      "DISABLE_AUTO_PIT_LIMITER": "Disabilita Limite Pit Automatico",
+      "DISABLE_AUTO_GEAR": "Disabilita Cambio Automatico",
+      "DISABLE_AUTO_CLUTCH": "Disabilita Frizione Automatica",
+      "DISABLE_IDEAL_LINE": "Disabilita Linea Ideale"
+    },
+    "DRIVER_INFO": {
+      "FIRST_NAME": "Nome",
+      "LAST_NAME": "Cognome",
+      "SHORT_NAME": "Nome Breve",
+      "DRIVER_CATEGORY": "Categoria Pilota",
+      "PLAYER_ID": "ID Giocatore"
+    },
+    "ENTRY": {
+      "RACE_NUMBER": "Numero Gara",
+      "FORCED_CAR_MODEL": "Modello Auto Forzato",
+      "OVERRIDE_DRIVER_INFO": "Sovrascrivi Info Pilota",
+      "IS_SERVER_ADMIN": "Amministratore Server",
+      "DEFAULT_GRID_POSITION": "Posizione Griglia Predefinita",
+      "BALLAST_KG": "Zavorra (Kg)",
+      "RESTRICTOR": "Restrictor",
+      "CUSTOM_CAR": "Auto Personalizzata",
+      "OVERRIDE_CAR_MODEL_FOR_CUSTOM_CAR": "Sovrascrivi Modello Auto Personalizzata"
+    },
+    "ENTRY_LIST": { "FORCE_ENTRY_LIST": "Forza Lista Partecipanti" },
+    "EVENT_CONFIG": {
+      "TRACK": "Tracciato",
+      "PRE_RACE_WAITING_TIME_SECONDS": "Tempo Attesa Pre-Gara (s)",
+      "SESSION_OVER_TIME_SECONDS": "Tempo Extra Sessione (s)",
+      "AMBIENT_TEMP": "Temperatura Ambiente",
+      "CLOUD_LEVEL": "Copertura Nuvolosa",
+      "RAIN": "Pioggia",
+      "WEATHER_RANDOMNESS": "Random Meteo",
+      "CONFIG_VERSION": "Versione Config",
+      "SESSIONS": "Sessioni"
+    },
+    "EVENT_SESSION": {
+      "HOUR_OF_DAY": "Ora del Giorno",
+      "DAY_OF_WEEKEND": "Giorno Weekend",
+      "TIME_MULTIPLIER": "Moltiplicatore Tempo",
+      "SESSION_TYPE": "Tipo Sessione",
+      "SESSION_DURATION_MINUTES": "Durata Sessione (min)"
+    },
+    "EVENT_RULES": {
+      "QUALIFY_STANDING_TYPE": "Tipo Classifica Qualifica",
+      "PIT_WINDOW_LENGTH_SEC": "Durata Finestra Pit (s)",
+      "DRIVER_STINT_TIME_SEC": "Tempo Stint Pilota (s)",
+      "MANDATORY_PITSTOP_COUNT": "Numero Pitstop Obbligatori",
+      "MAX_TOTAL_DRIVING_TIME": "Tempo Massimo Guida (s)",
+      "MAX_DRIVERS_COUNT": "Numero Massimo Piloti",
+      "IS_REFUELLING_ALLOWED_IN_RACE": "Rifornimento Consentito in Gara",
+      "IS_REFUELLING_TIME_FIXED": "Tempo Rifornimento Fisso",
+      "IS_MANDATORY_PITSTOP_REFUELLING_REQUIRED": "Rifornimento Obbligatorio",
+      "IS_MANDATORY_PITSTOP_TYRE_CHANGE_REQUIRED": "Cambio Pneumatici Obbligatorio",
+      "IS_MANDATORY_PITSTOP_SWAP_DRIVER_REQUIRED": "Cambio Pilota Obbligatorio",
+      "TYRE_SET_COUNT": "Numero Set Pneumatici"
+    },
+    "ACC_SETTINGS": {
+      "SERVER_NAME": "Nome Server",
+      "ADMIN_PASSWORD": "Password Admin",
+      "CAR_GROUP": "Gruppo Auto",
+      "TRACK_MEDALS_REQUIREMENT": "Requisito Medaglie Tracciato",
+      "SAFETY_RATING_REQUIREMENT": "Requisito Safety Rating",
+      "RACECRAFT_RATING_REQUIREMENT": "Requisito Racecraft Rating",
+      "PASSWORD": "Password Server",
+      "SPECTATOR_PASSWORD": "Password Spettatori",
+      "MAX_CAR_SLOTS": "Numero Massimo Auto",
+      "DUMP_LEADERBOARDS": "Aggiorna Classifiche",
+      "IS_RACE_LOCKED": "Gara Bloccata",
+      "RANDOMIZE_TRACK_WHEN_EMPTY": "Randomizza Tracciato se Vuoto",
+      "CENTRAL_ENTRY_LIST_PATH": "Percorso Lista Centrale",
+      "ALLOW_AUTO_DQ": "Consenti Auto DQ",
+      "SHORT_FORMATION_LAP": "Giro di Formazione Corto",
+      "DUMP_ENTRY_LIST": "Aggiorna Lista Partecipanti",
+      "FORMATION_LAP_TYPE": "Tipo Giro di Formazione",
+      "IGNORE_PREMATURE_DISCONNECTS": "Ignora Disconnessioni Premature"
+    },
+    "BUTTON": {
+      "DOWNLOAD": "Scarica",
+      "ADD_SESSION": "Aggiungi Sessione"
+    },
+    "ENABLED": "Abilitato",
+    "DISABLED": "Disabilitato",
+    "SESSION": "Sessione"
+  }
+}
