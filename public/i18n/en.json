@@ -41,6 +41,11 @@
       "2": "Silver",
       "3": "Gold"
     },
+    "DAY_OF_WEEKEND": {
+      "1": "Friday",
+      "2": "Saturday",
+      "3": "Sunday"
+    },
     "ACC_CONFIGURATION": {
       "UDP_PORT": "UDP Port",
       "TCP_PORT": "TCP Port",
@@ -133,9 +138,11 @@
       "IGNORE_PREMATURE_DISCONNECTS": "Ignore Premature Disconnects"
     },
     "BUTTON": {
-      "DOWNLOAD": "Download"
+      "DOWNLOAD": "Download",
+      "ADD_SESSION": "Add Session"
     },
     "ENABLED": "Enabled",
-    "DISABLED": "Disabled"
+    "DISABLED": "Disabled",
+    "SESSION": "Session"
   }
 }

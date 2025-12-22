@@ -3,4 +3,5 @@ export const FILENAME_CONSTANTS = {
     SETTINGS: 'settings',
     ASSIST_RULES: 'assistRules',
     EVENT_RULES: 'eventRules',
+    EVENT: 'event',
 };

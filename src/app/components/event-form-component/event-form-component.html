@@ -1,0 +1,118 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- TRACK -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.TRACK | translate }}</mat-label>
+            <mat-select formControlName="track">
+            <mat-option *ngFor="let t of trackOptions" [value]="t.value">
+                {{ t.label }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <!-- PRE RACE WAITING TIME -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.PRE_RACE_WAITING_TIME_SECONDS | translate }}</mat-label>
+        <input matInput type="number" formControlName="preRaceWaitingTimeSeconds">
+    </mat-form-field>
+
+    <!-- SESSION OVER TIME -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.SESSION_OVER_TIME_SECONDS | translate }}</mat-label>
+        <input matInput type="number" formControlName="sessionOverTimeSeconds">
+    </mat-form-field>
+
+    <!-- AMBIENT TEMP -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.AMBIENT_TEMP | translate }}</mat-label>
+        <input matInput type="number" formControlName="ambientTemp">
+    </mat-form-field>
+
+    <!-- CLOUD LEVEL -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.CLOUD_LEVEL | translate }}</mat-label>
+        <input matInput type="number" formControlName="cloudLevel">
+    </mat-form-field>
+
+    <!-- RAIN -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.RAIN | translate }}</mat-label>
+        <input matInput type="number" formControlName="rain">
+    </mat-form-field>
+
+    <!-- WEATHER RANDOMNESS -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.WEATHER_RANDOMNESS | translate }}</mat-label>
+        <input matInput type="number" formControlName="weatherRandomness">
+    </mat-form-field>
+
+    <!-- CONFIG VERSION -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.CONFIG_VERSION | translate }}</mat-label>
+        <input matInput type="text" formControlName="configVersion">
+    </mat-form-field>
+
+    <!-- POST QUALY -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.POST_QUALY_SECONDS | translate }}</mat-label>
+        <input matInput type="number" formControlName="postQualySeconds">
+    </mat-form-field>
+
+    <!-- POST RACE -->
+    <mat-form-field appearance="outline">
+        <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.POST_RACE_SECONDS | translate }}</mat-label>
+        <input matInput type="number" formControlName="postRaceSeconds">
+    </mat-form-field>
+
+    <!-- SESSIONS -->
+    <div formArrayName="sessions" class="sessions-container">
+        <div *ngFor="let session of sessions.controls; let i = index" [formGroupName]="i" class="session-row">
+            <h4>{{ I18N_KEYS.LABEL.SESSION | translate }} {{ i + 1 }}</h4>
+            <mat-form-field appearance="outline">
+                <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.HOUR_OF_DAY | translate }}</mat-label>
+                <input matInput type="number" formControlName="hourOfDay">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.DAY_OF_WEEKEND | translate }}</mat-label>
+                <input matInput type="number" formControlName="dayOfWeekend">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.TIME_MULTIPLIER | translate }}</mat-label>
+                <input matInput type="number" formControlName="timeMultiplier">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.SESSION_TYPE | translate }}</mat-label>
+                    <mat-select formControlName="sessionType">
+                    <mat-option *ngFor="let s of sessionTypesOptions" [value]="s.value">
+                        {{ s.label }}
+                    </mat-option>
+                    </mat-select>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.SESSION_DURATION_MINUTES | translate }}</mat-label>
+                <input matInput type="number" formControlName="sessionDurationMinutes">
+            </mat-form-field>
+
+            <button mat-icon-button color="warn" type="button" (click)="removeSession(i)">
+                <mat-icon>delete</mat-icon>
+            </button>
+
+        </div>
+    </div>
+
+    <button mat-raised-button color="primary" type="button" (click)="addSession()">
+        <mat-icon>add</mat-icon>
+        {{ I18N_KEYS.LABEL.BUTTON.ADD_SESSION | translate }}
+    </button>
+
+    <!-- SUBMIT -->
+    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+        <mat-icon>download</mat-icon>
+        {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
+    </button>
+
+</form>

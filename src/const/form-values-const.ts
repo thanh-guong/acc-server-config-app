@@ -1,7 +1,10 @@
 import { CarGroupsEnum } from "../app/enum/car-groups.enum";
 import { FormationLapTypeEnum } from "../app/enum/formation-lap-type.enum";
 import { QualifyStandingTypeEnum } from "../app/enum/qualify-standing-type.enum";
+import { SessionTypeEnum } from "../app/enum/session-type.enum";
 import { TrackMedalsRequirementEnum } from "../app/enum/track-medal-requirement.enum";
+import { TrackNameEnum } from "../app/enum/track-name.enum";
+import { DayOfWeekendEnum } from "../app/enum/day-of-weekend-enum";
 
 export const ACC_CONFIGURATION_VALUES = {
     udpPort: {
@@ -173,4 +176,81 @@ export const EVENT_RULES_VALUES = {
         minValue: 1,
         maxValue: 50,
     },
+};
+
+export const EVENT_VALUES = {
+    track: {
+        defaultValue: TrackNameEnum.SPA,
+    },
+
+    preRaceWaitingTimeSeconds: {
+        defaultValue: 60,
+        minValue: 30,
+    },
+
+    sessionOverTimeSeconds: {
+        defaultValue: 120,
+        minValue: 0,
+    },
+
+    ambientTemp: {
+        defaultValue: 20,
+    },
+
+    cloudLevel: {
+        defaultValue: 0.3,
+        minValue: 0,
+        maxValue: 1,
+    },
+
+    rain: {
+        defaultValue: 0.0,
+        minValue: 0,
+        maxValue: 1,
+    },
+
+    weatherRandomness: {
+        defaultValue: 0,
+        minValue: 0,
+        maxValue: 7,
+    },
+
+    configVersion: {
+        defaultValue: 1,
+    },
+
+    postQualySeconds: {
+        defaultValue: 30,
+        minValue: 1,
+    },
+
+    postRaceSeconds: {
+        defaultValue: 30,
+        minValue: 1,
+    },
+
+    sessions: {
+        hourOfDay: {
+            defaultValue: 10,
+            minValue: 0,
+            maxValue: 23,
+        },
+        dayOfWeekend: {
+            defaultValue: DayOfWeekendEnum.FRIDAY,
+            minValue: DayOfWeekendEnum.FRIDAY,
+            maxValue: DayOfWeekendEnum.SUNDAY,
+        },
+        timeMultiplier: {
+            defaultValue: 1,
+            minValue: 0,
+            maxValue: 24,
+        },
+        sessionType: {
+            defaultValue: SessionTypeEnum.FREE_PRACTICE,
+        },
+        sessionDurationMinutes: {
+            defaultValue: 20,
+        },
+
+    }
 };

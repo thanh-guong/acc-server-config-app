@@ -1,10 +1,11 @@
+import { DayOfWeekendEnum } from "../enum/day-of-weekend-enum";
 import { QualifyStandingTypeEnum } from "../enum/qualify-standing-type.enum";
 import { SessionTypeEnum } from "../enum/session-type.enum";
 import { TrackNameEnum } from "../enum/track-name.enum";
 
 export interface EventSession {
   hourOfDay: number; // TODO validation between 0 and 23
-  dayOfWeekend: number; // TODO validation between 1 and 3
+  dayOfWeekend: DayOfWeekendEnum; // TODO validation between 1 and 3
   timeMultiplier: number; // TODO validation between 0 and 24
   sessionType: SessionTypeEnum;
   sessionDurationMinutes: number;
