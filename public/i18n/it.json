@@ -134,7 +134,8 @@
       "ALLOW_AUTO_DQ": "Consenti Auto DQ",
       "SHORT_FORMATION_LAP": "Giro di Formazione Corto",
       "DUMP_ENTRY_LIST": "Aggiorna Lista Partecipanti",
-      "FORMATION_LAP_TYPE": "Tipo Giro di Formazione"
+      "FORMATION_LAP_TYPE": "Tipo Giro di Formazione",
+      "IGNORE_PREMATURE_DISCONNECTS": "Ignora Disconnessioni Premature"
     },
     "BUTTON": {
       "DOWNLOAD": "Scarica",
