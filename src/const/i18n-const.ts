@@ -150,5 +150,6 @@ export const I18N_KEYS = {
         },
         ENABLED: 'LABEL.ENABLED',
         DISABLED: 'LABEL.DISABLED',
+        SESSION: 'LABEL.SESSION',
     },
 };

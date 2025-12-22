@@ -67,7 +67,7 @@
     <!-- SESSIONS -->
     <div formArrayName="sessions" class="sessions-container">
         <div *ngFor="let session of sessions.controls; let i = index" [formGroupName]="i" class="session-row">
-
+            <h4>{{ I18N_KEYS.LABEL.SESSION | translate }} {{ i + 1 }}</h4>
             <mat-form-field appearance="outline">
                 <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.HOUR_OF_DAY | translate }}</mat-label>
                 <input matInput type="number" formControlName="hourOfDay">

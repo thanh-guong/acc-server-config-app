@@ -141,6 +141,7 @@
       "ADD_SESSION": "Aggiungi Sessione"
     },
     "ENABLED": "Abilitato",
-    "DISABLED": "Disabilitato"
+    "DISABLED": "Disabilitato",
+    "SESSION": "Sessione"
   }
 }
