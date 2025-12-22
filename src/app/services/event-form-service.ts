@@ -55,23 +55,23 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
 
   createSession(): FormGroup {
     return this.fb.group({
-      hourOfDay: this.fb.control(EVENT_VALUES.sessions.hourOfDay, [
+      hourOfDay: this.fb.control(EVENT_VALUES.sessions.hourOfDay.defaultValue, [
         Validators.required,
         Validators.min(EVENT_VALUES.sessions.hourOfDay.minValue),
         Validators.max(EVENT_VALUES.sessions.hourOfDay.maxValue),
       ]),
-      dayOfWeekend: this.fb.control(EVENT_VALUES.sessions.dayOfWeekend, [
+      dayOfWeekend: this.fb.control(EVENT_VALUES.sessions.dayOfWeekend.defaultValue, [
         Validators.required,
         Validators.min(EVENT_VALUES.sessions.dayOfWeekend.minValue),
         Validators.max(EVENT_VALUES.sessions.dayOfWeekend.maxValue),
       ]),
-      timeMultiplier: this.fb.control(EVENT_VALUES.sessions.timeMultiplier, [
+      timeMultiplier: this.fb.control(EVENT_VALUES.sessions.timeMultiplier.defaultValue, [
         Validators.required,
         Validators.min(EVENT_VALUES.sessions.timeMultiplier.minValue),
         Validators.max(EVENT_VALUES.sessions.timeMultiplier.maxValue),
       ]),
-      sessionType: this.fb.control(EVENT_VALUES.sessions.sessionType, [Validators.required]),
-      sessionDurationMinutes: this.fb.control(EVENT_VALUES.sessions.sessionDurationMinutes, [Validators.required,]),
+      sessionType: this.fb.control(EVENT_VALUES.sessions.sessionType.defaultValue, [Validators.required]),
+      sessionDurationMinutes: this.fb.control(EVENT_VALUES.sessions.sessionDurationMinutes.defaultValue, [Validators.required,]),
     });
   }
 
