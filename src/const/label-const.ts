@@ -96,4 +96,12 @@ export const LABELS = {
         [TrackNameEnum.VALENCIA]: 'Circuit Ricardo Tormo',
         [TrackNameEnum.NURBURGRING_24H]: 'Nürburgring 24h',
     },
+    APP: {
+        GITHUB: {
+            REPOSITORY: 'Github Repository'
+        },
+        LINKEDIN: {
+            LINKEDIN: 'LinkedIn'
+        }
+    }
 };

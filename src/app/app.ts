@@ -12,10 +12,25 @@ import { LanguageSelectorComponent } from './components/language-selector-compon
 import { AssistRulesFormComponent } from './components/assist-rules-form-component/assist-rules-form-component';
 import { EventRulesFormComponent } from './components/event-rules-form-component/event-rules-form-component';
 import { EventFormComponent } from './components/event-form-component/event-form-component';
+import { FooterComponent } from './components/footer-component/footer-component';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TranslatePipe, TranslateDirective, ToolbarComponent, ConfigurationFormComponent, AccSettingsFormComponent, LanguageSelectorComponent, AssistRulesFormComponent, EventRulesFormComponent, EventFormComponent],
+  imports: [
+    RouterOutlet,
+    TranslatePipe,
+    TranslateDirective,
+    ToolbarComponent,
+    ConfigurationFormComponent,
+    AccSettingsFormComponent,
+    LanguageSelectorComponent,
+    AssistRulesFormComponent,
+    EventRulesFormComponent,
+    EventFormComponent,
+    FooterComponent,
+    MatDividerModule,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

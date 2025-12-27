@@ -149,7 +149,10 @@
     "APP": {
       "DESCRIPTION_5": "This application provides support for configuring Assetto Corsa Competizione dedicated servers.",
       "DESCRIPTION_10": "You can interact with the forms below and download ready-to-use JSON server configuration files for Assetto Corsa Competizione dedicated servers.",
-      "DESCRIPTION_15": "The project is currently under development and some bugs may be present. If you encounter any issues, please report them."
+      "DESCRIPTION_15": "The project is currently under development and some bugs may be present. If you encounter any issues, please report them.",
+      "GITHUB": {
+        "REPORT_AN_ISSUE": "Report issues"
+      }
     }
   }
 }

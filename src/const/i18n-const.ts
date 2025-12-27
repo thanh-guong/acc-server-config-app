@@ -156,6 +156,9 @@ export const I18N_KEYS = {
             DESCRIPTION_5: 'LABEL.APP.DESCRIPTION_5',
             DESCRIPTION_10: 'LABEL.APP.DESCRIPTION_10',
             DESCRIPTION_15: 'LABEL.APP.DESCRIPTION_15',
+            GITHUB: {
+                REPORT_AN_ISSUE: 'LABEL.APP.GITHUB.REPORT_AN_ISSUE',
+            },
         }
     },
 };
