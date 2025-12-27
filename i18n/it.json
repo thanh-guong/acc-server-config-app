@@ -143,6 +143,14 @@
     },
     "ENABLED": "Abilitato",
     "DISABLED": "Disabilitato",
-    "SESSION": "Sessione"
+    "SESSION": "Sessione",
+    "APP": {
+      "DESCRIPTION_5": "Questa applicazione è di supporto per la configurazione dei server dedicati di Assetto Corsa Competizione.",
+      "DESCRIPTION_10": "E' possibile interagire con le form sottostanti e scaricare file di configurazione JSON del server pronti all'uso per i server dedicati di Assetto Corsa Competizione.",
+      "DESCRIPTION_15": "Attualmente il progetto è in fase di sviluppo, potrebbero essere presenti alcuni bug! Nel caso in cui si riscontrassero dei problemi, si prega di segnalarli.",
+      "GITHUB": {
+        "REPORT_AN_ISSUE": "Segnalazioni"
+      }
+    }
   }
 }
