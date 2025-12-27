@@ -152,5 +152,10 @@ export const I18N_KEYS = {
         ENABLED: 'LABEL.ENABLED',
         DISABLED: 'LABEL.DISABLED',
         SESSION: 'LABEL.SESSION',
+        APP: {
+            DESCRIPTION_5: 'LABEL.APP.DESCRIPTION_5',
+            DESCRIPTION_10: 'LABEL.APP.DESCRIPTION_10',
+            DESCRIPTION_15: 'LABEL.APP.DESCRIPTION_15',
+        }
     },
 };

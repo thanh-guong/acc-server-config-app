@@ -84,7 +84,9 @@
       "CUSTOM_CAR": "Custom Car",
       "OVERRIDE_CAR_MODEL_FOR_CUSTOM_CAR": "Override Custom Car Model"
     },
-    "ENTRY_LIST": { "FORCE_ENTRY_LIST": "Force Entry List" },
+    "ENTRY_LIST": {
+      "FORCE_ENTRY_LIST": "Force Entry List"
+    },
     "EVENT_CONFIG": {
       "TRACK": "Track",
       "PRE_RACE_WAITING_TIME_SECONDS": "Pre-Race Waiting Time (s)",
@@ -143,6 +145,11 @@
     },
     "ENABLED": "Enabled",
     "DISABLED": "Disabled",
-    "SESSION": "Session"
+    "SESSION": "Session",
+    "APP": {
+      "DESCRIPTION_5": "This application provides support for configuring Assetto Corsa Competizione dedicated servers.",
+      "DESCRIPTION_10": "You can interact with the forms below and download ready-to-use JSON server configuration files for Assetto Corsa Competizione dedicated servers.",
+      "DESCRIPTION_15": "The project is currently under development and some bugs may be present. If you encounter any issues, please report them."
+    }
   }
 }
