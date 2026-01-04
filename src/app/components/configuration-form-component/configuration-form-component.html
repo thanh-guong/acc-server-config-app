@@ -1,47 +1,64 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.UDP_PORT | translate }}</mat-label>
-    <input matInput type="number" formControlName="udpPort">
-  </mat-form-field>
+  <div class="row gx-3">
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.UDP_PORT | translate }}</mat-label>
+        <input matInput type="number" formControlName="udpPort">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.TCP_PORT | translate }}</mat-label>
-    <input matInput type="number" formControlName="tcpPort">
-  </mat-form-field>
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.TCP_PORT | translate }}</mat-label>
+        <input matInput type="number" formControlName="tcpPort">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.MAX_CONNECTIONS | translate }}</mat-label>
-    <input matInput type="number" formControlName="maxConnections">
-  </mat-form-field>
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.MAX_CONNECTIONS | translate }}</mat-label>
+        <input matInput type="number" formControlName="maxConnections">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.LAN_DISCOVERY | translate }}</mat-label>
-    <mat-select formControlName="lanDiscovery">
-      <mat-option *ngFor="let opt of options" [value]="opt.value">
-        {{ opt.label }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.LAN_DISCOVERY | translate }}</mat-label>
+        <mat-select formControlName="lanDiscovery">
+          <mat-option *ngFor="let opt of options" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.REGISTER_TO_LOBBY | translate }}</mat-label>
-    <mat-select formControlName="registerToLobby">
-      <mat-option *ngFor="let opt of options" [value]="opt.value">
-        {{ opt.label }}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.REGISTER_TO_LOBBY | translate }}</mat-label>
+        <mat-select formControlName="registerToLobby">
+          <mat-option *ngFor="let opt of options" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.PUBLIC_IP | translate }}</mat-label>
-    <input matInput type="text" formControlName="publicIP">
-  </mat-form-field>
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.PUBLIC_IP | translate }}</mat-label>
+        <input matInput type="text" formControlName="publicIP">
+      </mat-form-field>
+    </div>
 
-  <mat-form-field appearance="outline">
-    <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.CONFIG_VERSION | translate }}</mat-label>
-    <input matInput type="number" formControlName="configVersion">
-  </mat-form-field>
+    <div class="col-lg-2 col-md-4 col-6">
+      <mat-form-field appearance="outline" class="w-100">
+        <mat-label>{{ I18N_KEYS.LABEL.ACC_CONFIGURATION.CONFIG_VERSION | translate }}</mat-label>
+        <input matInput type="number" formControlName="configVersion">
+      </mat-form-field>
+    </div>
+  </div>
+
 
   <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
     <mat-icon>download</mat-icon>
