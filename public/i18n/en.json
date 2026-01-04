@@ -96,7 +96,9 @@
       "RAIN": "Rain",
       "WEATHER_RANDOMNESS": "Weather Randomness",
       "CONFIG_VERSION": "Config Version",
-      "SESSIONS": "Sessions"
+      "SESSIONS": "Sessions",
+      "POST_QUALY_SECONDS": "Post-Qualify Seconds",
+      "POST_RACE_SECONDS": "Post-Race Seconds"
     },
     "EVENT_SESSION": {
       "HOUR_OF_DAY": "Hour of Day",

@@ -94,7 +94,9 @@
       "RAIN": "Pioggia",
       "WEATHER_RANDOMNESS": "Random Meteo",
       "CONFIG_VERSION": "Versione Config",
-      "SESSIONS": "Sessioni"
+      "SESSIONS": "Sessioni",
+      "POST_QUALY_SECONDS": "Secondi Post-Qualifica",
+      "POST_RACE_SECONDS": "Secondi Post-Gara"
     },
     "EVENT_SESSION": {
       "HOUR_OF_DAY": "Ora del Giorno",
