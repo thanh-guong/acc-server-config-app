@@ -1,16 +1,19 @@
 <app-toolbar-component></app-toolbar-component>
-<p>{{ I18N_KEYS.LABEL.APP.DESCRIPTION_5 | translate }}</p>
-<p>{{ I18N_KEYS.LABEL.APP.DESCRIPTION_10 | translate }}</p>
-<p>{{ I18N_KEYS.LABEL.APP.DESCRIPTION_15 | translate }}</p>
-<h1>configuration.json</h1>
-<br/><app-configuration-form-component></app-configuration-form-component><br/>
-<h1>settings.json</h1>
-<br/><app-acc-settings-form-component></app-acc-settings-form-component><br/>
-<h1>event.json</h1>
-<br/><app-event-form-component></app-event-form-component><br/>
-<h1>eventRules.json</h1>
-<br/><app-event-rules-form-component></app-event-rules-form-component><br/>
-<h1>assistRules.json</h1>
-<br/><app-assist-rules-form-component></app-assist-rules-form-component><br/>
+<div class="container-xxl my-4">
+    <p>{{ I18N_KEYS.LABEL.APP.DESCRIPTION_5 | translate }}</p>
+    <p>{{ I18N_KEYS.LABEL.APP.DESCRIPTION_10 | translate }}</p>
+    <p>{{ I18N_KEYS.LABEL.APP.DESCRIPTION_15 | translate }}</p>
+
+    <h1 class="mb-4">configuration.json</h1>
+    <app-configuration-form-component></app-configuration-form-component>
+    <h1 class="my-4">settings.json</h1>
+    <app-acc-settings-form-component></app-acc-settings-form-component>
+    <h1 class="my-4">event.json</h1>
+    <app-event-form-component></app-event-form-component>
+    <h1 class="my-4">eventRules.json</h1>
+    <app-event-rules-form-component></app-event-rules-form-component>
+    <h1 class="my-4">assistRules.json</h1>
+    <app-assist-rules-form-component></app-assist-rules-form-component>
+</div>
 <mat-divider></mat-divider>
 <app-footer-component></app-footer-component>
