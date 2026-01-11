@@ -159,8 +159,8 @@
     "UI_FEEDBACK_MESSAGING": {
       "FORM": {
         "ERROR": {
-          "REQUIRED": "This field is required.",
-          "INVALID_FORMAT": "The entered format is not valid."
+          "REQUIRED": "Required",
+          "INVALID_FORMAT": "Invalid format"
         }
       }
     }
