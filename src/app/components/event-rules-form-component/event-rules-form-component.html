@@ -1,128 +1,165 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-  <div class="row gx-3">
+  <div class="row gx-3 gy-3">
 
     <!-- QUALIFY STANDING TYPE -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.QUALIFY_STANDING_TYPE | translate }}</mat-label>
+        <mat-error *ngIf="hasError('qualifyStandingType')">
+          {{ getI18nKeyErrorMessage('qualifyStandingType') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="qualifyStandingType">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- PIT WINDOW LENGTH SEC -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.PIT_WINDOW_LENGTH_SEC | translate }}</mat-label>
+        <mat-error *ngIf="hasError('pitWindowLengthSec')">
+          {{ getI18nKeyErrorMessage('pitWindowLengthSec') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="pitWindowLengthSec">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- DRIVER STINT TIME SEC -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.DRIVER_STINT_TIME_SEC | translate }}</mat-label>
+        <mat-error *ngIf="hasError('driverStintTimeSec')">
+          {{ getI18nKeyErrorMessage('driverStintTimeSec') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="driverStintTimeSec">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- MANDATORY PITSTOP COUNT -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.MANDATORY_PITSTOP_COUNT | translate }}</mat-label>
+        <mat-error *ngIf="hasError('mandatoryPitstopCount')">
+          {{ getI18nKeyErrorMessage('mandatoryPitstopCount') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="mandatoryPitstopCount">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- MAX TOTAL DRIVING TIME -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.MAX_TOTAL_DRIVING_TIME | translate }}</mat-label>
+        <mat-error *ngIf="hasError('maxTotalDrivingTime')">
+          {{ getI18nKeyErrorMessage('maxTotalDrivingTime') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="maxTotalDrivingTime">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- MAX DRIVERS COUNT -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.MAX_DRIVERS_COUNT | translate }}</mat-label>
+        <mat-error *ngIf="hasError('maxDriversCount')">
+          {{ getI18nKeyErrorMessage('maxDriversCount') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="maxDriversCount">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- IS REFUELLING ALLOWED IN RACE -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_REFUELLING_ALLOWED_IN_RACE | translate }}</mat-label>
+        <mat-error *ngIf="hasError('isRefuellingAllowedInRace')">
+          {{ getI18nKeyErrorMessage('isRefuellingAllowedInRace') | translate }}
+        </mat-error>
         <mat-select formControlName="isRefuellingAllowedInRace">
-            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
-                {{ opt.label }}
-            </mat-option>
+          <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
         </mat-select>
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- IS REFUELLING TIME FIXED -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_REFUELLING_TIME_FIXED | translate }}</mat-label>
+        <mat-error *ngIf="hasError('isRefuellingTimeFixed')">
+          {{ getI18nKeyErrorMessage('isRefuellingTimeFixed') | translate }}
+        </mat-error>
         <mat-select formControlName="isRefuellingTimeFixed">
-            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
-                {{ opt.label }}
-            </mat-option>
+          <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
         </mat-select>
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- IS MANDATORY PITSTOP REFUELLING REQUIRED -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_MANDATORY_PITSTOP_REFUELLING_REQUIRED | translate }}</mat-label>
+        <mat-error *ngIf="hasError('isMandatoryPitstopRefuellingRequired')">
+          {{ getI18nKeyErrorMessage('isMandatoryPitstopRefuellingRequired') | translate }}
+        </mat-error>
         <mat-select formControlName="isMandatoryPitstopRefuellingRequired">
-            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
-                {{ opt.label }}
-            </mat-option>
+          <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
         </mat-select>
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- IS MANDATORY PITSTOP TYRE CHANGE REQUIRED -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_MANDATORY_PITSTOP_TYRE_CHANGE_REQUIRED | translate }}</mat-label>
+        <mat-error *ngIf="hasError('isMandatoryPitstopTyreChangeRequired')">
+          {{ getI18nKeyErrorMessage('isMandatoryPitstopTyreChangeRequired') | translate }}
+        </mat-error>
         <mat-select formControlName="isMandatoryPitstopTyreChangeRequired">
-            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
-                {{ opt.label }}
-            </mat-option>
+          <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
         </mat-select>
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- IS MANDATORY PITSTOP SWAP DRIVER REQUIRED -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.IS_MANDATORY_PITSTOP_SWAP_DRIVER_REQUIRED | translate }}</mat-label>
+        <mat-error *ngIf="hasError('isMandatoryPitstopSwapDriverRequired')">
+          {{ getI18nKeyErrorMessage('isMandatoryPitstopSwapDriverRequired') | translate }}
+        </mat-error>
         <mat-select formControlName="isMandatoryPitstopSwapDriverRequired">
-            <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
-                {{ opt.label }}
-            </mat-option>
+          <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
+            {{ opt.label }}
+          </mat-option>
         </mat-select>
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
     <!-- TYRE SET COUNT -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_RULES.TYRE_SET_COUNT | translate }}</mat-label>
+        <mat-error *ngIf="hasError('tyreSetCount')">
+          {{ getI18nKeyErrorMessage('tyreSetCount') | translate }}
+        </mat-error>
         <input matInput type="number" formControlName="tyreSetCount">
-    </mat-form-field>
+      </mat-form-field>
     </div>
 
   </div>
 
-    <!-- SUBMIT -->
-    <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
-        <mat-icon>download</mat-icon>
-        {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
-    </button>
+  <!-- SUBMIT -->
+  <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
+    <mat-icon>download</mat-icon>
+    {{ I18N_KEYS.LABEL.BUTTON.DOWNLOAD | translate }}
+  </button>
+
 </form>
