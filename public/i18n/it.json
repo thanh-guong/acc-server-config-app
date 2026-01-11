@@ -153,6 +153,14 @@
       "GITHUB": {
         "REPORT_AN_ISSUE": "Segnalazioni"
       }
+    },
+    "UI_FEEDBACK_MESSAGING": {
+      "FORM": {
+        "ERROR": {
+          "REQUIRED": "Questo campo è obbligatorio.",
+          "INVALID_FORMAT": "Il formato inserito non è valido."
+        }
+      }
     }
   }
 }

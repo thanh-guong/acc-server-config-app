@@ -155,6 +155,14 @@
       "GITHUB": {
         "REPORT_AN_ISSUE": "Report issues"
       }
+    },
+    "UI_FEEDBACK_MESSAGING": {
+      "FORM": {
+        "ERROR": {
+          "REQUIRED": "This field is required.",
+          "INVALID_FORMAT": "The entered format is not valid."
+        }
+      }
     }
   }
 }
