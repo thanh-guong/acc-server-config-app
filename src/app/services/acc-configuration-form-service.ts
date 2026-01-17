@@ -3,7 +3,7 @@ import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { AccConfiguration } from '../models/acc-configuration.model';
 import { ACC_CONFIGURATION_VALUES } from '../../const/form-values-const';
 import { BaseFormService } from './base-form-service';
-import { integerPatternValidator } from '../validators/pattern-validators';
+import { integerPatternValidator, ipv4Validator } from '../validators/pattern-validators';
 
 @Injectable({ providedIn: 'root' })
 export class AccConfigurationFormService extends BaseFormService<AccConfiguration, NonNullableFormBuilder> {
@@ -34,7 +34,10 @@ export class AccConfigurationFormService extends BaseFormService<AccConfiguratio
       ]),
       lanDiscovery: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.lanDiscovery.defaultValue as 0 | 1, Validators.required),
       registerToLobby: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.registerToLobby.defaultValue as 0 | 1, Validators.required),
-      publicIP: this.fb.control<string | undefined>(ACC_CONFIGURATION_VALUES.publicIP.defaultValue),
+      publicIP: this.fb.control<string | undefined>(ACC_CONFIGURATION_VALUES.publicIP.defaultValue, [
+          ipv4Validator(),
+        ],
+      ),
       configVersion: this.fb.control(ACC_CONFIGURATION_VALUES.configVersion.defaultValue, [
         Validators.required,
         integerPatternValidator({allowZero: true, allowNegative: false}),
