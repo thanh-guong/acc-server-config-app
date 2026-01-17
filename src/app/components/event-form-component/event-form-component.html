@@ -6,8 +6,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.TRACK | translate }}</mat-label>
-        <mat-error *ngIf="hasError('track')">
-          {{ getI18nKeyErrorMessage('track') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('track') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="track">
           <mat-option *ngFor="let t of trackOptions" [value]="t.value">
@@ -21,10 +21,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.PRE_RACE_WAITING_TIME_SECONDS | translate }}</mat-label>
-        <mat-error *ngIf="hasError('preRaceWaitingTimeSeconds')">
-          {{ getI18nKeyErrorMessage('preRaceWaitingTimeSeconds') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('preRaceWaitingTimeSeconds') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="preRaceWaitingTimeSeconds">
+        <input matInput type="text" inputmode="numeric" formControlName="preRaceWaitingTimeSeconds">
       </mat-form-field>
     </div>
 
@@ -32,10 +32,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.SESSION_OVER_TIME_SECONDS | translate }}</mat-label>
-        <mat-error *ngIf="hasError('sessionOverTimeSeconds')">
-          {{ getI18nKeyErrorMessage('sessionOverTimeSeconds') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('sessionOverTimeSeconds') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="sessionOverTimeSeconds">
+        <input matInput type="text" inputmode="numeric" formControlName="sessionOverTimeSeconds">
       </mat-form-field>
     </div>
 
@@ -43,10 +43,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.AMBIENT_TEMP | translate }}</mat-label>
-        <mat-error *ngIf="hasError('ambientTemp')">
-          {{ getI18nKeyErrorMessage('ambientTemp') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('ambientTemp') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="ambientTemp">
+        <input matInput type="text" inputmode="numeric" formControlName="ambientTemp">
       </mat-form-field>
     </div>
 
@@ -54,10 +54,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.CLOUD_LEVEL | translate }}</mat-label>
-        <mat-error *ngIf="hasError('cloudLevel')">
-          {{ getI18nKeyErrorMessage('cloudLevel') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('cloudLevel') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="cloudLevel">
+        <input matInput type="text" inputmode="numeric" formControlName="cloudLevel">
       </mat-form-field>
     </div>
 
@@ -65,10 +65,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.RAIN | translate }}</mat-label>
-        <mat-error *ngIf="hasError('rain')">
-          {{ getI18nKeyErrorMessage('rain') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('rain') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="rain">
+        <input matInput type="text" inputmode="numeric" formControlName="rain">
       </mat-form-field>
     </div>
 
@@ -76,10 +76,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.WEATHER_RANDOMNESS | translate }}</mat-label>
-        <mat-error *ngIf="hasError('weatherRandomness')">
-          {{ getI18nKeyErrorMessage('weatherRandomness') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('weatherRandomness') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="weatherRandomness">
+        <input matInput type="text" inputmode="numeric" formControlName="weatherRandomness">
       </mat-form-field>
     </div>
 
@@ -87,8 +87,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.CONFIG_VERSION | translate }}</mat-label>
-        <mat-error *ngIf="hasError('configVersion')">
-          {{ getI18nKeyErrorMessage('configVersion') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('configVersion') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <input matInput type="text" formControlName="configVersion">
       </mat-form-field>
@@ -98,10 +98,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.POST_QUALY_SECONDS | translate }}</mat-label>
-        <mat-error *ngIf="hasError('postQualySeconds')">
-          {{ getI18nKeyErrorMessage('postQualySeconds') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('postQualySeconds') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="postQualySeconds">
+        <input matInput type="text" inputmode="numeric" formControlName="postQualySeconds">
       </mat-form-field>
     </div>
 
@@ -109,10 +109,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.EVENT_CONFIG.POST_RACE_SECONDS | translate }}</mat-label>
-        <mat-error *ngIf="hasError('postRaceSeconds')">
-          {{ getI18nKeyErrorMessage('postRaceSeconds') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('postRaceSeconds') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="postRaceSeconds">
+        <input matInput type="text" inputmode="numeric" formControlName="postRaceSeconds">
       </mat-form-field>
     </div>
 
@@ -136,38 +136,38 @@
         <div class="col-lg-2 col-md-4 col-6">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.HOUR_OF_DAY | translate }}</mat-label>
-            <mat-error *ngIf="hasError('hourOfDay')">
-              {{ getI18nKeyErrorMessage('hourOfDay') | translate }}
+            <mat-error *ngIf="getI18nKeyErrorMessage('hourOfDay') as error">
+              {{ error.key | translate:error.params }}
             </mat-error>
-            <input matInput type="number" formControlName="hourOfDay">
+            <input matInput type="text" inputmode="numeric" formControlName="hourOfDay">
           </mat-form-field>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.DAY_OF_WEEKEND | translate }}</mat-label>
-            <mat-error *ngIf="hasError('dayOfWeekend')">
-              {{ getI18nKeyErrorMessage('dayOfWeekend') | translate }}
+            <mat-error *ngIf="getI18nKeyErrorMessage('dayOfWeekend') as error">
+              {{ error.key | translate:error.params }}
             </mat-error>
-            <input matInput type="number" formControlName="dayOfWeekend">
+            <input matInput type="text" inputmode="numeric" formControlName="dayOfWeekend">
           </mat-form-field>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.TIME_MULTIPLIER | translate }}</mat-label>
-            <mat-error *ngIf="hasError('timeMultiplier')">
-              {{ getI18nKeyErrorMessage('timeMultiplier') | translate }}
+            <mat-error *ngIf="getI18nKeyErrorMessage('timeMultiplier') as error">
+              {{ error.key | translate:error.params }}
             </mat-error>
-            <input matInput type="number" formControlName="timeMultiplier">
+            <input matInput type="text" inputmode="numeric" formControlName="timeMultiplier">
           </mat-form-field>
         </div>
 
         <div class="col-lg-2 col-md-4 col-6">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.SESSION_TYPE | translate }}</mat-label>
-            <mat-error *ngIf="hasError('sessionType')">
-              {{ getI18nKeyErrorMessage('sessionType') | translate }}
+            <mat-error *ngIf="getI18nKeyErrorMessage('sessionType') as error">
+              {{ error.key | translate:error.params }}
             </mat-error>
             <mat-select formControlName="sessionType">
               <mat-option *ngFor="let s of sessionTypesOptions" [value]="s.value">
@@ -180,10 +180,10 @@
         <div class="col-lg-2 col-md-4 col-6">
           <mat-form-field appearance="outline" class="w-100">
             <mat-label>{{ I18N_KEYS.LABEL.EVENT_SESSION.SESSION_DURATION_MINUTES | translate }}</mat-label>
-            <mat-error *ngIf="hasError('sessionDurationMinutes')">
-              {{ getI18nKeyErrorMessage('sessionDurationMinutes') | translate }}
+            <mat-error *ngIf="getI18nKeyErrorMessage('sessionDurationMinutes') as error">
+              {{ error.key | translate:error.params }}
             </mat-error>
-            <input matInput type="number" formControlName="sessionDurationMinutes">
+            <input matInput type="text" inputmode="numeric" formControlName="sessionDurationMinutes">
           </mat-form-field>
         </div>
 

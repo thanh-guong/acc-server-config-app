@@ -8,10 +8,10 @@
         <mat-label>
           {{ I18N_KEYS.LABEL.ASSIST_RULES.STABILITY_CONTROL_LEVEL_MAX | translate }}
         </mat-label>
-        <mat-error *ngIf="hasError('stabilityControlLevelMax')">
-          {{ getI18nKeyErrorMessage('stabilityControlLevelMax') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('stabilityControlLevelMax') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="number" formControlName="stabilityControlLevelMax">
+        <input matInput type="text" inputmode="numeric" formControlName="stabilityControlLevelMax">
       </mat-form-field>
     </div>
 
@@ -19,8 +19,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTOSTEER | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutosteer')">
-          {{ getI18nKeyErrorMessage('disableAutosteer') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutosteer') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutosteer">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -34,8 +34,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_LIGHTS | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutoLights')">
-          {{ getI18nKeyErrorMessage('disableAutoLights') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutoLights') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutoLights">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -49,8 +49,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_WIPER | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutoWiper')">
-          {{ getI18nKeyErrorMessage('disableAutoWiper') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutoWiper') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutoWiper">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -64,8 +64,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_ENGINE_START | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutoEngineStart')">
-          {{ getI18nKeyErrorMessage('disableAutoEngineStart') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutoEngineStart') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutoEngineStart">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -79,8 +79,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_PIT_LIMITER | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutoPitLimiter')">
-          {{ getI18nKeyErrorMessage('disableAutoPitLimiter') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutoPitLimiter') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutoPitLimiter">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -94,8 +94,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_GEAR | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutoGear')">
-          {{ getI18nKeyErrorMessage('disableAutoGear') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutoGear') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutoGear">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -109,8 +109,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_AUTO_CLUTCH | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableAutoClutch')">
-          {{ getI18nKeyErrorMessage('disableAutoClutch') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableAutoClutch') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableAutoClutch">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
@@ -124,8 +124,8 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ASSIST_RULES.DISABLE_IDEAL_LINE | translate }}</mat-label>
-        <mat-error *ngIf="hasError('disableIdealLine')">
-          {{ getI18nKeyErrorMessage('disableIdealLine') | translate }}
+        <mat-error *ngIf="getI18nKeyErrorMessage('disableIdealLine') as error">
+          {{ error.key | translate:error.params }}
         </mat-error>
         <mat-select formControlName="disableIdealLine">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">

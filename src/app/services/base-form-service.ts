@@ -23,16 +23,21 @@ export abstract class BaseFormService<T, B extends FormBuilder | NonNullableForm
     return !!(control && control.invalid && (control.dirty || control.touched));
   }
 
-  getI18nKeyErrorMessage(controlName: string): string | null {
+  getI18nKeyErrorMessage(controlName: string): { key: string; params?: Record<string, any>; } | null {
     const control = this.getControl(controlName);
 
     if (!control || !control.errors || !(control.dirty || control.touched)) {
       return null;
     }
 
-    const errorKey = Object.keys(control.errors)[0];
+    const errorKey = Object.keys(control.errors)[0]; // Get the first error key
     const errorValue = control.errors[errorKey];
 
-    return FORM_ERROR_MESSAGES_I18N_KEYS[errorKey]?.(errorValue) ?? null;
+    const i18nKeyFn = FORM_ERROR_MESSAGES_I18N_KEYS[errorKey];
+    if (!i18nKeyFn) {
+      return null;
+    }
+
+    return { key: i18nKeyFn(errorValue), params: errorValue, };
   }
 }

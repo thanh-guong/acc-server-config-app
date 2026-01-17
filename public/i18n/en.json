@@ -160,7 +160,9 @@
       "FORM": {
         "ERROR": {
           "REQUIRED": "Required",
-          "INVALID_FORMAT": "Invalid format"
+          "INVALID_FORMAT": "Invalid format",
+          "LOWER_THAN_MINIMUM": "Min: {{ min }}",
+          "GREATER_THAN_MAXIMUM": "Max: {{ max }}"
         }
       }
     }
