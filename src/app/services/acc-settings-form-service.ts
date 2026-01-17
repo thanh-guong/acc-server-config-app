@@ -6,7 +6,7 @@ import { CarGroupsEnum } from '../enum/car-groups.enum';
 import { FormationLapTypeEnum } from '../enum/formation-lap-type.enum';
 import { TrackMedalsRequirementEnum } from '../enum/track-medal-requirement.enum';
 import { ACC_SETTINGS_VALUES } from '../../const/form-values-const';
-import { integerPatternValidator } from '../validators/pattern-validators';
+import { fullPathValidator, integerPatternValidator } from '../validators/pattern-validators';
 
 @Injectable({ providedIn: 'root' })
 export class AccSettingsFormService extends BaseFormService<AccSettings, NonNullableFormBuilder> {
@@ -53,7 +53,9 @@ export class AccSettingsFormService extends BaseFormService<AccSettings, NonNull
       dumpLeaderboards: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.dumpLeaderboards.defaultValue as 0 | 1,Validators.required),
       isRaceLocked: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.isRaceLocked.defaultValue as 0 | 1,Validators.required),
       randomizeTrackWhenEmpty: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.randomizeTrackWhenEmpty.defaultValue as 0 | 1, Validators.required),
-      centralEntryListPath: this.fb.control<string | undefined>(ACC_SETTINGS_VALUES.centralEntryListPath.defaultValue),
+      centralEntryListPath: this.fb.control<string | undefined>(ACC_SETTINGS_VALUES.centralEntryListPath.defaultValue, [
+        fullPathValidator(),
+      ]),
       allowAutoDQ: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.allowAutoDQ.defaultValue as 0 | 1, Validators.required),
       shortFormationLap: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.shortFormationLap.defaultValue as 0 | 1, Validators.required),
       dumpEntryList: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.dumpEntryList.defaultValue as 0 | 1, Validators.required),
