@@ -35,13 +35,13 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
         Validators.required,
         Validators.min(EVENT_VALUES.cloudLevel.minValue),
         Validators.max(EVENT_VALUES.cloudLevel.maxValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        // TODO validator for decimal numbers
       ]),
       rain: this.fb.control(EVENT_VALUES.rain.defaultValue, [
         Validators.required,
         Validators.min(EVENT_VALUES.rain.minValue),
         Validators.max(EVENT_VALUES.rain.maxValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        // TODO validator for decimal numbers
       ]),
       weatherRandomness: this.fb.control(EVENT_VALUES.weatherRandomness.defaultValue, [
         Validators.required,
