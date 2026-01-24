@@ -20,7 +20,7 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
       preRaceWaitingTimeSeconds: this.fb.control(EVENT_VALUES.preRaceWaitingTimeSeconds.defaultValue, [
         Validators.required,
         Validators.min(EVENT_VALUES.preRaceWaitingTimeSeconds.minValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: false, allowNegative: false}),
       ]),
       sessionOverTimeSeconds: this.fb.control(EVENT_VALUES.sessionOverTimeSeconds.defaultValue, [
         Validators.required,
@@ -29,7 +29,7 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
       ]),
       ambientTemp: this.fb.control(EVENT_VALUES.ambientTemp.defaultValue, [
         Validators.required,
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: true, allowNegative: true}),
       ]),
       cloudLevel: this.fb.control(EVENT_VALUES.cloudLevel.defaultValue, [
         Validators.required,
@@ -85,7 +85,7 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
         Validators.required,
         Validators.min(EVENT_VALUES.sessions.timeMultiplier.minValue),
         Validators.max(EVENT_VALUES.sessions.timeMultiplier.maxValue),
-        integerPatternValidator({allowZero: false, allowNegative: false}),
+        integerPatternValidator({allowZero: true, allowNegative: false}),
       ]),
       sessionType: this.fb.control(EVENT_VALUES.sessions.sessionType.defaultValue, [Validators.required]),
       sessionDurationMinutes: this.fb.control(EVENT_VALUES.sessions.sessionDurationMinutes.defaultValue, [

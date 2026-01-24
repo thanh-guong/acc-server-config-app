@@ -27,7 +27,7 @@ export class AccSettingsFormService extends BaseFormService<AccSettings, NonNull
           Validators.required,
           Validators.min(ACC_SETTINGS_VALUES.safetyRatingRequirement.minValue),
           Validators.max(ACC_SETTINGS_VALUES.safetyRatingRequirement.maxValue),
-          integerPatternValidator({allowZero: true, allowNegative: false}),
+          integerPatternValidator({allowZero: true, allowNegative: true}),
         ]
       ),
       racecraftRatingRequirement: this.fb.control(

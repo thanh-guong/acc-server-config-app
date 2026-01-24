@@ -19,17 +19,17 @@ export class EventRulesFormService  extends BaseFormService<EventRules, NonNulla
     return this.fb.group({
       qualifyStandingType: this.fb.control(EVENT_RULES_VALUES.qualifyStandingType.defaultValue, [
         Validators.required,
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: false, allowNegative: false}),
       ]),
       pitWindowLengthSec: this.fb.control(EVENT_RULES_VALUES.pitWindowLengthSec.defaultValue, [
         Validators.required,
         Validators.min(EVENT_RULES_VALUES.pitWindowLengthSec.minValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: true, allowNegative: true}),
       ]),
       driverStintTimeSec: this.fb.control(EVENT_RULES_VALUES.driverStintTimeSec.defaultValue, [
         Validators.required,
         Validators.min(EVENT_RULES_VALUES.driverStintTimeSec.minValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: true, allowNegative: true}),
       ]),
       mandatoryPitstopCount: this.fb.control(EVENT_RULES_VALUES.mandatoryPitstopCount.defaultValue, [
         Validators.required,
@@ -39,12 +39,12 @@ export class EventRulesFormService  extends BaseFormService<EventRules, NonNulla
       maxTotalDrivingTime: this.fb.control(EVENT_RULES_VALUES.maxTotalDrivingTime.defaultValue, [
         Validators.required,
         Validators.min(EVENT_RULES_VALUES.maxTotalDrivingTime.minValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: true, allowNegative: true}),
       ]),
       maxDriversCount: this.fb.control(EVENT_RULES_VALUES.maxDriversCount.defaultValue, [
         Validators.required,
         Validators.min(EVENT_RULES_VALUES.maxDriversCount.minValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: false, allowNegative: false}),
       ]),
       isRefuellingAllowedInRace: this.fb.control<boolean>(EVENT_RULES_VALUES.isRefuellingAllowedInRace.defaultValue),
       isRefuellingTimeFixed: this.fb.control<boolean>(EVENT_RULES_VALUES.isRefuellingTimeFixed.defaultValue),
@@ -55,7 +55,7 @@ export class EventRulesFormService  extends BaseFormService<EventRules, NonNulla
         Validators.required,
         Validators.min(EVENT_RULES_VALUES.tyreSetCount.minValue),
         Validators.max(EVENT_RULES_VALUES.tyreSetCount.maxValue),
-        integerPatternValidator({allowZero: true, allowNegative: false}),
+        integerPatternValidator({allowZero: false, allowNegative: false}),
       ]),
     });
   }
