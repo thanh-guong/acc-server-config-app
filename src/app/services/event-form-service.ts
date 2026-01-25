@@ -3,7 +3,7 @@ import { FormGroup, FormArray, NonNullableFormBuilder, Validators } from '@angul
 import { BaseFormService } from './base-form-service';
 import { EVENT_VALUES } from '../../const/form-values-const';
 import { EventConfig } from '../models/acc-event.model';
-import { integerPatternValidator } from '../validators/pattern-validators';
+import { decimalPatternValidator, integerPatternValidator } from '../validators/pattern-validators';
 
 @Injectable({
   providedIn: 'root',
@@ -35,13 +35,13 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
         Validators.required,
         Validators.min(EVENT_VALUES.cloudLevel.minValue),
         Validators.max(EVENT_VALUES.cloudLevel.maxValue),
-        // TODO validator for decimal numbers
+        decimalPatternValidator(),
       ]),
       rain: this.fb.control(EVENT_VALUES.rain.defaultValue, [
         Validators.required,
         Validators.min(EVENT_VALUES.rain.minValue),
         Validators.max(EVENT_VALUES.rain.maxValue),
-        // TODO validator for decimal numbers
+        decimalPatternValidator(),
       ]),
       weatherRandomness: this.fb.control(EVENT_VALUES.weatherRandomness.defaultValue, [
         Validators.required,

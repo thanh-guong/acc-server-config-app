@@ -43,6 +43,21 @@ export function integerPatternValidator(options: IntegerPatternOptions = {}): Va
   };
 }
 
+export function decimalPatternValidator(): ValidatorFn {
+  // -10 | -1.5 | -0.5 | 0 | 0.5 | 10.25
+  const regex = /^-?(0|[1-9]\d*)(\.\d+)?$/;
+
+  return (control: AbstractControl): ValidationErrors | null => {
+    const value = control.value;
+
+    if (value === null || value === undefined || value === '') {
+      return null;
+    }
+
+    return regex.test(value.toString()) ? null : { [PATTERN_NAMES.DECIMAL]: true };
+  };
+}
+
 export function ipv4Validator(): ValidatorFn {
   return (control: AbstractControl): ValidationErrors | null => {
     const value = control.value;
