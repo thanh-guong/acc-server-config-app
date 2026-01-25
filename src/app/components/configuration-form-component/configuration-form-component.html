@@ -71,7 +71,7 @@
         <mat-error *ngIf="getI18nKeyErrorMessage('publicIP') as error">
           {{ error.key | translate:error.params }}
         </mat-error>
-        <input matInput type="text" formControlName="publicIP">
+        <input matInput type="text" formControlName="publicIP" placeholder="93.184.216.34">
       </mat-form-field>
     </div>
 
