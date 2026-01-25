@@ -159,6 +159,22 @@ export const I18N_KEYS = {
             GITHUB: {
                 REPORT_AN_ISSUE: 'LABEL.APP.GITHUB.REPORT_AN_ISSUE',
             },
-        }
+        },
+        UI_FEEDBACK_MESSAGING: {
+            FORM: {
+                INFO: {
+
+                },
+                WARN: {
+
+                },
+                ERROR: {   
+                    REQUIRED: 'LABEL.UI_FEEDBACK_MESSAGING.FORM.ERROR.REQUIRED',
+                    INVALID_FORMAT: 'LABEL.UI_FEEDBACK_MESSAGING.FORM.ERROR.INVALID_FORMAT',
+                    LOWER_THAN_MINIMUM: 'LABEL.UI_FEEDBACK_MESSAGING.FORM.ERROR.LOWER_THAN_MINIMUM',
+                    GREATER_THAN_MAXIMUM: 'LABEL.UI_FEEDBACK_MESSAGING.FORM.ERROR.GREATER_THAN_MAXIMUM',
+                },
+            },
+        },
     },
 };

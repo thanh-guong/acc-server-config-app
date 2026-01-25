@@ -3,6 +3,7 @@ import { FormGroup, NonNullableFormBuilder, Validators } from '@angular/forms';
 import { ASSIST_RULES_VALUES } from '../../const/form-values-const';
 import { BaseFormService } from './base-form-service';
 import { AssistRules } from '../models/acc-assist-rules.model';
+import { integerPatternValidator } from '../validators/pattern-validators';
 
 @Injectable({ providedIn: 'root' })
 export class AssistRulesService extends BaseFormService<AssistRules, NonNullableFormBuilder> {
@@ -15,6 +16,7 @@ export class AssistRulesService extends BaseFormService<AssistRules, NonNullable
     return this.fb.group({
       stabilityControlLevelMax: this.fb.control(ASSIST_RULES_VALUES.stabilityControlLevelMax.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(ASSIST_RULES_VALUES.stabilityControlLevelMax.minValue),
         Validators.max(ASSIST_RULES_VALUES.stabilityControlLevelMax.maxValue),
       ]),

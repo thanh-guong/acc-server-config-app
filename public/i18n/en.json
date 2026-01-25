@@ -155,6 +155,16 @@
       "GITHUB": {
         "REPORT_AN_ISSUE": "Report issues"
       }
+    },
+    "UI_FEEDBACK_MESSAGING": {
+      "FORM": {
+        "ERROR": {
+          "REQUIRED": "Required",
+          "INVALID_FORMAT": "Invalid format",
+          "LOWER_THAN_MINIMUM": "Min: {{ min }}",
+          "GREATER_THAN_MAXIMUM": "Max: {{ max }}"
+        }
+      }
     }
   }
 }

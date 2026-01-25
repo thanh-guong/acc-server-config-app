@@ -16,5 +16,13 @@ export abstract class BaseInternationalizedFormComponent<TModel, TService extend
     return this.formService.getValue();
   }
 
+  hasError(controlName: string): boolean {
+    return this.formService.hasError(controlName);
+  }
+
+  getI18nKeyErrorMessage(controlName: string): { key: string; params?: Record<string, any>; } | null {
+    return this.formService.getI18nKeyErrorMessage(controlName);
+  }
+
   protected abstract onSubmit(): void;
 }

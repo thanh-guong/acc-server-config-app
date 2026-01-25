@@ -1,11 +1,14 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-  <div class="row gx-3">
+  <div class="row gx-3 gy-3">
 
     <!-- SERVER NAME -->
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SERVER_NAME | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('serverName') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <input matInput type="text" formControlName="serverName">
       </mat-form-field>
     </div>
@@ -14,6 +17,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.ADMIN_PASSWORD | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('adminPassword') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <input matInput type="password" formControlName="adminPassword">
       </mat-form-field>
     </div>
@@ -22,6 +28,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.CAR_GROUP | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('carGroup') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="carGroup">
           <mat-option *ngFor="let cg of carGroupOptions" [value]="cg.value">
             {{ cg.label }}
@@ -34,6 +43,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.TRACK_MEDALS_REQUIREMENT | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('trackMedalsRequirement') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="trackMedalsRequirement">
           <mat-option *ngFor="let t of trackMedalReqOptions" [value]="t.value">
             {{ t.label }}
@@ -46,7 +58,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SAFETY_RATING_REQUIREMENT | translate }}</mat-label>
-        <input matInput type="number" formControlName="safetyRatingRequirement">
+        <mat-error *ngIf="getI18nKeyErrorMessage('safetyRatingRequirement') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
+        <input matInput type="text" inputmode="numeric" formControlName="safetyRatingRequirement">
       </mat-form-field>
     </div>
 
@@ -54,7 +69,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.RACECRAFT_RATING_REQUIREMENT | translate }}</mat-label>
-        <input matInput type="number" formControlName="racecraftRatingRequirement">
+        <mat-error *ngIf="getI18nKeyErrorMessage('racecraftRatingRequirement') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
+        <input matInput type="text" inputmode="numeric" formControlName="racecraftRatingRequirement">
       </mat-form-field>
     </div>
 
@@ -62,6 +80,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.PASSWORD | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('password') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <input matInput type="text" formControlName="password">
       </mat-form-field>
     </div>
@@ -70,6 +91,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SPECTATOR_PASSWORD | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('spectatorPassword') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <input matInput type="text" formControlName="spectatorPassword">
       </mat-form-field>
     </div>
@@ -78,7 +102,10 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.MAX_CAR_SLOTS | translate }}</mat-label>
-        <input matInput type="number" formControlName="maxCarSlots">
+        <mat-error *ngIf="getI18nKeyErrorMessage('maxCarSlots') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
+        <input matInput type="text" inputmode="numeric" formControlName="maxCarSlots">
       </mat-form-field>
     </div>
 
@@ -86,6 +113,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.DUMP_LEADERBOARDS | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('dumpLeaderboards') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="dumpLeaderboards">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -98,6 +128,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.IS_RACE_LOCKED | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('isRaceLocked') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="isRaceLocked">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -110,6 +143,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.RANDOMIZE_TRACK_WHEN_EMPTY | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('randomizeTrackWhenEmpty') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="randomizeTrackWhenEmpty">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -122,6 +158,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.ALLOW_AUTO_DQ | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('allowAutoDQ') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="allowAutoDQ">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -134,6 +173,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.SHORT_FORMATION_LAP | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('shortFormationLap') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="shortFormationLap">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -146,6 +188,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.DUMP_ENTRY_LIST | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('dumpEntryList') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="dumpEntryList">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -158,6 +203,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.FORMATION_LAP_TYPE | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('formationLapType') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="formationLapType">
           <mat-option *ngFor="let fl of formationLapOptions" [value]="fl.value">
             {{ fl.label }}
@@ -170,7 +218,10 @@
     <div class="col-lg-4 col-md-8 col-12">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.CENTRAL_ENTRY_LIST_PATH | translate }}</mat-label>
-        <input matInput type="text" formControlName="centralEntryListPath">
+        <mat-error *ngIf="getI18nKeyErrorMessage('centralEntryListPath') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
+        <input matInput type="text" formControlName="centralEntryListPath" placeholder="C:\ACC\server\entrylist.json">
       </mat-form-field>
     </div>
 
@@ -178,6 +229,9 @@
     <div class="col-lg-2 col-md-4 col-6">
       <mat-form-field appearance="outline" class="w-100">
         <mat-label>{{ I18N_KEYS.LABEL.ACC_SETTINGS.IGNORE_PREMATURE_DISCONNECTS | translate }}</mat-label>
+        <mat-error *ngIf="getI18nKeyErrorMessage('ignorePrematureDisconnects') as error">
+          {{ error.key | translate:error.params }}
+        </mat-error>
         <mat-select formControlName="ignorePrematureDisconnects">
           <mat-option *ngFor="let opt of yesNoOptions" [value]="opt.value">
             {{ opt.label }}
@@ -187,7 +241,6 @@
     </div>
 
   </div>
-
 
   <!-- SUBMIT -->
   <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">
