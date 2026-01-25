@@ -19,13 +19,13 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
       track: this.fb.control(EVENT_VALUES.track.defaultValue, [Validators.required]),
       preRaceWaitingTimeSeconds: this.fb.control(EVENT_VALUES.preRaceWaitingTimeSeconds.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_VALUES.preRaceWaitingTimeSeconds.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_VALUES.preRaceWaitingTimeSeconds.minValue),
       ]),
       sessionOverTimeSeconds: this.fb.control(EVENT_VALUES.sessionOverTimeSeconds.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_VALUES.sessionOverTimeSeconds.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_VALUES.sessionOverTimeSeconds.minValue),
       ]),
       ambientTemp: this.fb.control(EVENT_VALUES.ambientTemp.defaultValue, [
         Validators.required,
@@ -33,21 +33,21 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
       ]),
       cloudLevel: this.fb.control(EVENT_VALUES.cloudLevel.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_VALUES.cloudLevel.minValue),
         Validators.max(EVENT_VALUES.cloudLevel.maxValue),
-        decimalPatternValidator(),
       ]),
       rain: this.fb.control(EVENT_VALUES.rain.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_VALUES.rain.minValue),
         Validators.max(EVENT_VALUES.rain.maxValue),
-        decimalPatternValidator(),
       ]),
       weatherRandomness: this.fb.control(EVENT_VALUES.weatherRandomness.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_VALUES.weatherRandomness.minValue),
         Validators.max(EVENT_VALUES.weatherRandomness.maxValue),
-        integerPatternValidator(),
       ]),
       configVersion: this.fb.control(EVENT_VALUES.configVersion.defaultValue, [
         Validators.required,
@@ -55,13 +55,13 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
       ]),
       postQualySeconds: this.fb.control(EVENT_VALUES.postQualySeconds.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_VALUES.postQualySeconds.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_VALUES.postQualySeconds.minValue),
       ]),
       postRaceSeconds: this.fb.control(EVENT_VALUES.postRaceSeconds.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_VALUES.postRaceSeconds.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_VALUES.postRaceSeconds.minValue),
       ]),
       sessions: this.fb.array([]),
     });
@@ -71,21 +71,21 @@ export class EventFormService extends BaseFormService<EventConfig, NonNullableFo
     return this.fb.group({
       hourOfDay: this.fb.control(EVENT_VALUES.sessions.hourOfDay.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_VALUES.sessions.hourOfDay.minValue),
         Validators.max(EVENT_VALUES.sessions.hourOfDay.maxValue),
-        integerPatternValidator(),
       ]),
       dayOfWeekend: this.fb.control(EVENT_VALUES.sessions.dayOfWeekend.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_VALUES.sessions.dayOfWeekend.minValue),
         Validators.max(EVENT_VALUES.sessions.dayOfWeekend.maxValue),
-        integerPatternValidator(),
       ]),
       timeMultiplier: this.fb.control(EVENT_VALUES.sessions.timeMultiplier.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_VALUES.sessions.timeMultiplier.minValue),
         Validators.max(EVENT_VALUES.sessions.timeMultiplier.maxValue),
-        integerPatternValidator(),
       ]),
       sessionType: this.fb.control(EVENT_VALUES.sessions.sessionType.defaultValue, [Validators.required]),
       sessionDurationMinutes: this.fb.control(EVENT_VALUES.sessions.sessionDurationMinutes.defaultValue, [

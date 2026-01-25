@@ -23,28 +23,28 @@ export class EventRulesFormService  extends BaseFormService<EventRules, NonNulla
       ]),
       pitWindowLengthSec: this.fb.control(EVENT_RULES_VALUES.pitWindowLengthSec.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_RULES_VALUES.pitWindowLengthSec.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_RULES_VALUES.pitWindowLengthSec.minValue),
       ]),
       driverStintTimeSec: this.fb.control(EVENT_RULES_VALUES.driverStintTimeSec.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_RULES_VALUES.driverStintTimeSec.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_RULES_VALUES.driverStintTimeSec.minValue),
       ]),
       mandatoryPitstopCount: this.fb.control(EVENT_RULES_VALUES.mandatoryPitstopCount.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_RULES_VALUES.mandatoryPitstopCount.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_RULES_VALUES.mandatoryPitstopCount.minValue),
       ]),
       maxTotalDrivingTime: this.fb.control(EVENT_RULES_VALUES.maxTotalDrivingTime.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_RULES_VALUES.maxTotalDrivingTime.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_RULES_VALUES.maxTotalDrivingTime.minValue),
       ]),
       maxDriversCount: this.fb.control(EVENT_RULES_VALUES.maxDriversCount.defaultValue, [
         Validators.required,
-        Validators.min(EVENT_RULES_VALUES.maxDriversCount.minValue),
         integerPatternValidator(),
+        Validators.min(EVENT_RULES_VALUES.maxDriversCount.minValue),
       ]),
       isRefuellingAllowedInRace: this.fb.control<boolean>(EVENT_RULES_VALUES.isRefuellingAllowedInRace.defaultValue),
       isRefuellingTimeFixed: this.fb.control<boolean>(EVENT_RULES_VALUES.isRefuellingTimeFixed.defaultValue),
@@ -53,9 +53,9 @@ export class EventRulesFormService  extends BaseFormService<EventRules, NonNulla
       isMandatoryPitstopSwapDriverRequired: this.fb.control<boolean>(EVENT_RULES_VALUES.isMandatoryPitstopSwapDriverRequired.defaultValue),
       tyreSetCount: this.fb.control(EVENT_RULES_VALUES.tyreSetCount.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(EVENT_RULES_VALUES.tyreSetCount.minValue),
         Validators.max(EVENT_RULES_VALUES.tyreSetCount.maxValue),
-        integerPatternValidator(),
       ]),
     });
   }

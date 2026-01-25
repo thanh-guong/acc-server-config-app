@@ -16,9 +16,9 @@ export class AssistRulesService extends BaseFormService<AssistRules, NonNullable
     return this.fb.group({
       stabilityControlLevelMax: this.fb.control(ASSIST_RULES_VALUES.stabilityControlLevelMax.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(ASSIST_RULES_VALUES.stabilityControlLevelMax.minValue),
         Validators.max(ASSIST_RULES_VALUES.stabilityControlLevelMax.maxValue),
-        integerPatternValidator(),
       ]),
       disableAutosteer: this.fb.control<0 | 1>(ASSIST_RULES_VALUES.disableAutosteer.defaultValue as 0 | 1, Validators.required),
       disableAutoLights: this.fb.control<0 | 1>(ASSIST_RULES_VALUES.disableAutoLights.defaultValue as 0 | 1, Validators.required),

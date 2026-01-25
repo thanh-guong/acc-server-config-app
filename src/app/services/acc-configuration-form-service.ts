@@ -16,21 +16,21 @@ export class AccConfigurationFormService extends BaseFormService<AccConfiguratio
     return this.fb.group({
       udpPort: this.fb.control(ACC_CONFIGURATION_VALUES.udpPort.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(ACC_CONFIGURATION_VALUES.udpPort.minValue),
         Validators.max(ACC_CONFIGURATION_VALUES.udpPort.maxValue),
-        integerPatternValidator(),
       ]),
       tcpPort: this.fb.control(ACC_CONFIGURATION_VALUES.tcpPort.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(ACC_CONFIGURATION_VALUES.tcpPort.minValue),
         Validators.max(ACC_CONFIGURATION_VALUES.tcpPort.maxValue),
-        integerPatternValidator(),
       ]),
       maxConnections: this.fb.control(ACC_CONFIGURATION_VALUES.maxConnections.defaultValue, [
         Validators.required,
+        integerPatternValidator(),
         Validators.min(ACC_CONFIGURATION_VALUES.maxConnections.minValue),
         Validators.max(ACC_CONFIGURATION_VALUES.maxConnections.maxValue),
-        integerPatternValidator(),
       ]),
       lanDiscovery: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.lanDiscovery.defaultValue as 0 | 1, Validators.required),
       registerToLobby: this.fb.control<0 | 1>(ACC_CONFIGURATION_VALUES.registerToLobby.defaultValue as 0 | 1, Validators.required),
