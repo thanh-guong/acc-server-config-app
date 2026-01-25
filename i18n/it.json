@@ -153,6 +153,16 @@
       "GITHUB": {
         "REPORT_AN_ISSUE": "Segnalazioni"
       }
+    },
+    "UI_FEEDBACK_MESSAGING": {
+      "FORM": {
+        "ERROR": {
+          "REQUIRED": "Obbligatorio",
+          "INVALID_FORMAT": "Formato non valido",
+          "LOWER_THAN_MINIMUM": "Min: {{ min }}",
+          "GREATER_THAN_MAXIMUM": "Max: {{ max }}"
+        }
+      }
     }
   }
 }
