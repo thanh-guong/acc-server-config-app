@@ -10,27 +10,9 @@ interface IntegerPatternOptions {
   allowNegative?: boolean;
 }
 
-export function integerPatternValidator(options: IntegerPatternOptions = {}): ValidatorFn {
-  const {
-    allowZero = true,
-    allowNegative = false,
-  } = options;
-
-  let regex: RegExp;
-
-  if (allowNegative && allowZero) {
-    // -10, -1, 0, 1, 10
-    regex = /^-?(0|[1-9]\d*)$/;
-  } else if (allowNegative && !allowZero) {
-    // -10, -1, 1, 10
-    regex = /^-?[1-9]\d*$/;
-  } else if (!allowNegative && allowZero) {
-    // 0, 1, 10
-    regex = /^(0|[1-9]\d*)$/;
-  } else {
-    // 1, 10
-    regex = /^[1-9]\d*$/;
-  }
+export function integerPatternValidator(): ValidatorFn {
+  // -10 | -1 | 0 | 1 | 10
+  const regex = /^-?(0|[1-9]\d*)$/;
 
   return (control: AbstractControl): ValidationErrors | null => {
     const value = control.value;
@@ -39,7 +21,7 @@ export function integerPatternValidator(options: IntegerPatternOptions = {}): Va
       return null;
     }
 
-    return regex.test(value) ? null : { [PATTERN_NAMES.INTEGER]: true };
+    return regex.test(value.toString()) ? null : { [PATTERN_NAMES.INTEGER]: true };
   };
 }
 

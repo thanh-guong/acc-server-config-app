@@ -27,7 +27,7 @@ export class AccSettingsFormService extends BaseFormService<AccSettings, NonNull
           Validators.required,
           Validators.min(ACC_SETTINGS_VALUES.safetyRatingRequirement.minValue),
           Validators.max(ACC_SETTINGS_VALUES.safetyRatingRequirement.maxValue),
-          integerPatternValidator({allowZero: true, allowNegative: true}),
+          integerPatternValidator(),
         ]
       ),
       racecraftRatingRequirement: this.fb.control(
@@ -36,7 +36,7 @@ export class AccSettingsFormService extends BaseFormService<AccSettings, NonNull
           Validators.required,
           Validators.min(ACC_SETTINGS_VALUES.racecraftRatingRequirement.minValue),
           Validators.max(ACC_SETTINGS_VALUES.racecraftRatingRequirement.maxValue),
-          integerPatternValidator({allowZero: true, allowNegative: false}),
+          integerPatternValidator(),
         ]
       ),
       password: this.fb.control<string | undefined>(ACC_SETTINGS_VALUES.password.defaultValue),
@@ -47,7 +47,7 @@ export class AccSettingsFormService extends BaseFormService<AccSettings, NonNull
           Validators.required,
           Validators.min(ACC_SETTINGS_VALUES.maxCarSlots.minValue),
           Validators.max(ACC_SETTINGS_VALUES.maxCarSlots.maxValue),
-          integerPatternValidator({allowZero: false, allowNegative: false}),
+          integerPatternValidator(),
         ]
       ),
       dumpLeaderboards: this.fb.control<0 | 1>(ACC_SETTINGS_VALUES.dumpLeaderboards.defaultValue as 0 | 1,Validators.required),
